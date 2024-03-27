@@ -1,5 +1,5 @@
-AWS Cloud Practitioner Certification Cheat Sheet
-Notes for the CLF-C02 exam
+# AWS Cloud Practitioner Certification Cheat Sheet
+# Notes for the CLF-C02 exam
 
 ### Intro
 - 3 Deployment Methods Private, Public, Hybrid
@@ -211,20 +211,22 @@ Latency, Disaster Recovery, Attack
 - **AWS Local Zones**
   - Brings AWS resources (compute, database, storage, …) closer to your users
   - Good for latency-sensitive applications
+- **WAF** Web application Firewall
 
 ### Cloud Integration
-  - SQS (Simple Queue Service): produce messages in the queue
+Decouple synchronous applications
+- **SQS** (Simple Queue Service): produce messages in the queue
   - Queue service in AWS
   - Multiple Producers, messages are kept up to 14 days
   - Multiple Consumers share the read and delete message
   - Used to decouple applications in AWS
-  - SNS (Simple Notification Service): publish messages in the queue
+- **SNS** (Simple Notification Service): publish messages in the queue
   - Notification service in AWS
   - Publisher: Email, Lambda, SQS, HTTP, Mobile, …
   - Multiple Subscribers, send all messages to all of them
   - No message retention
-  - Kinesis — Real-time data streaming, persistence, and analysis
-  - Amazon MQ — Managed message broker for ActiveMQ and RabbitMQ in the cloud (MQTT, AMQP… protocols)
+- **Kinesis** — Real-time data streaming, persistence, and analysis (video)
+- **Amazon MQ** — Managed message broker for ActiveMQ and RabbitMQ in the cloud (MQTT, AMQP… protocols)
 
 ## Cloud Monitoring
   - CloudWatch
