@@ -170,23 +170,28 @@ Notes for the CLF-C02 exam
   - **Batch** — Run batch jobs on AWS across managed EC2 instance
   - **Lightsail** — Predictable & low pricing for simple applications & DB
 
-## Deployment
-  - CloudFormation (AWS only)
-  - Infrastructure as Code, works with almost all AWS resources ○ Repeat across Regions & accounts
-  - Beanstalk (AWS only)
-  - Platform as a Service (PaaS), limited to certain programming languages or Docker
-  - Deploy code consistently with a known architecture: ex, ALB+BC+RDS
+# Deployment
+  - **CloudFormation**
+    - Cost
+    - Productivity
+    - IaaC: Infrastructure as a Code
+    - Need to repeat architecture in different settings: environment, region or account
+    - CFT: Cloud Formation Template
+      
+  - **Beanstalk**
+    - PaaS: Platform as a Service
+    - Health Monitoring
+      
+  - AWS CDK (Cloud Development Kit) — Defined your cloud infrastructure using a programming language
   - CodeDeploy (Hybrid) — Deploy & upgrade any application onto servers
-  - Systems Manager (Hybrid) — Patch, configure, and run commands at scale
-  - OpsWorks (Hybrid) — Managed Chef and Puppet in AWS
-  - CodeCommit — Store code in private git repository (version controlled)
-  - CodeBuild — Build & Test code in AWS
-  - CodeDeploy — Deploy code onto servers
+  - CodeCommit — private git repository/version control
+  - CodeBuild — Build & Test code
   - CodePipeline — Orchestration of pipeline (from code to build to deploy)
   - CodeArtifact — Store software packages/dependencies on AWS
   - CodeStar — Unified view for allowing developers to do CI/CD and code
   - Cloud9 — Cloud IDE with collab
-  - AWS CDK (Cloud Development Kit) — Defined your cloud infrastructure using a programming language
+  - Systems Manager (Hybrid) — Patch, configure, and run commands at scale
+  - OpsWorks (Hybrid) — Managed Chef and Puppet in AWS
 
 ## Leveraging the AWS Global Application
   - Global DNS: Route 53
