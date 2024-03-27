@@ -87,6 +87,17 @@ AWS Cloud Practitioner Certification Cheat Sheet
   - Scale EC2 instances based on the demand on your system, and replace unhealthy
   - Integrated with the ELB
 
+## Storage
+  - **EBS** Elastic Block Store
+  - **AMI** Amazon Machine Image
+  - **EC2** Instance Store -> short term storage
+  - **EFS** Elastic File System. No root storage, mounted to store data
+    - **EFS IA** Infrequent Access
+  - **EBS** Elastic Block Store = Block based storage for EC2
+-------------------------------------------------
+| Object Storage | Block Storage | File Storage |
+-------------------------------------------------
+
 ## Amazon S3
   - Buckets vs Objects — global unique name, tied to a region
   - S3 Security — IAM policy, S3 Bucket Policy (public access), S3 Encryption
