@@ -1,13 +1,13 @@
 AWS Cloud Practitioner Certification Cheat Sheet
-# Notes for the CLF-C02 exam
+Notes for the CLF-C02 exam
 
-## Intro
+# Intro
 - 3 Deployment Methods Private, Public, Hybrid
 - 5 Characteristics of CC 
 - 4 Benefits of CC: Agility, Elasticity, Cost Savings, Deploy globally in minutes 
 - 3 types of CC IaaS, PaaS, SaaS
 
-## 6 Categories and colors
+# 6 Categories and colors
 - Orange: Compute
 - Purple: Network
 - Pink: Governance and Monitoring
@@ -15,7 +15,7 @@ AWS Cloud Practitioner Certification Cheat Sheet
 - Red: Security
 - Green: Storage
 
-## Pricing 
+# Pricing 
 - Compute: by CPU time
 - Storage: by MB stored
 - Network: only data leaving the cloud
@@ -95,12 +95,12 @@ AWS Cloud Practitioner Certification Cheat Sheet
   - Integrated with the ELB
 
 ## Storage
-  - **EBS** Elastic Block Store
-  - **AMI** Amazon Machine Image
-  - **EC2** Instance Store -> short term storage
+  - **S3** Simple Storage Service
   - **EFS** Elastic File System. No root storage, mounted to store data
     - **EFS IA** Infrequent Access
   - **EBS** Elastic Block Store = Block based storage for EC2
+  - **AMI** Amazon Machine Image
+  - **EC2** Instance Store -> short term storage
   - Access: standard, infrequent, archivial ( = glacier )
 
 | Object Storage | Block Storage | File Storage |
