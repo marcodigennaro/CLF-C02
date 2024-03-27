@@ -20,7 +20,7 @@ AWS Cloud Practitioner Certification Cheat Sheet
 - Edge Locations
 - AWS Regional Services List
 
-##IAM (Identity and Access Management)
+## IAM (Identity and Access Management)
 - Users Mapped to a physical user, has a password for AWS Console
 - Groups Contains users only
 - Policies JSON document that outlines permissions for users or groups
@@ -39,7 +39,8 @@ EC2 User Data — Script launched at the first start of an instance
 SSH — Start terminal into our EC2 Instances (port 22)
 EC2 Instance Role — Link to IAM roles
 Purchasing Options — On-demand, Spot, Reserved (Standard + Convertible), Dedicated Host, Dedicated Instance
-EC2 Instance Storage
+
+## EC2 Instance Storage
  EBS Volumes
 Network drives attached to one EC2 instance at a time
 Mapped to an Availability Zones
@@ -54,7 +55,7 @@ EFS-IA — Cost-optimized storage class of infrequent access file
 FSx for Windows — Network File System for Windows servers
 FSx for Lustre — High-Performance Computing Linux file system
 
-ELB & ASG
+## ELB & ASG
  High Availability vs Scalability (vertical and horizontal) vs Elasticity vs Agility in the Cloud
  Elastic Load Balancers (ELB):
 Distribute traffic across backend EC2 instances, can be Multi-AZ ○ Supports health checks
@@ -64,7 +65,7 @@ Implement Elasticity for your application, across multiple AZ
 Scale EC2 instances based on the demand on your system, and replace unhealthy
 Integrated with the ELB
 
-Amazon S3
+## Amazon S3
 Buckets vs Objects — global unique name, tied to a region
 S3 Security — IAM policy, S3 Bucket Policy (public access), S3 Encryption
 S3 Websites — Host a static website on Amazon S3
@@ -76,7 +77,8 @@ SnowCone & SnowCone SSD — Storage capacity → 8TB HDD, 14TB SSD, Storage capa
 Snowball Edge & Storage Optimized — Storage capacity → 80TB usable, Storage capacity → up to Petabytes, offline
 SnowMobile — Storage capacity → < 100PB, Storage capacity → up to Exabytes, offline
 OpsHub — Desktop application to manage Snow Family devices Storage Gateway — Hybrid solution to extend on-premises storage to S3 
-Databases & Analytics
+
+## Databases & Analytics
 Database vs Engine
 Non Relational Databases: Need for speed = key + value
 DynamoDB (serverless)
@@ -97,7 +99,7 @@ Amazon QLDB — Financial Transactions Ledger (immutable journal, cryptographica
 Amazon Managed Blockchain — managed Hyperledger Fabric & Ethereum blockchains
 
 
-Other Compute
+## Other Compute
 Docker — Container technology to run applications
 ECS (Elastic Container Service)— Run docker containers on EC2 instance
 Fargate
@@ -106,7 +108,8 @@ Serverless offering (no EC2 instances)
 ECR (Elastic Container Registry) — Private Docker Image Repository
 Batch — Run batch jobs on AWS across managed EC2 instance
 Lightsail — Predictable & low pricing for simple applications & DB
-Lambda
+
+## Lambda
  Lamba — Serverless, FaaS, seamless scaling, reactive Lambda Billings
 By the time run x by the RAM Provisioned
 By the number of invocations
@@ -117,7 +120,7 @@ Create Thumbnails for images uploaded onto S3
 Run a Serverless cron job
  API Gateway — Expose Lambda functions as HTTP API
 
-Deployment
+## Deployment
  CloudFormation (AWS only)
 Infrastructure as Code, works with almost all AWS resources ○ Repeat across Regions & accounts
  Beanstalk (AWS only)
@@ -135,7 +138,7 @@ CodeStar — Unified view for allowing developers to do CI/CD and code
 Cloud9 — Cloud IDE with collab
 AWS CDK (Cloud Development Kit) — Defined your cloud infrastructure using a programming language
 
-Leveraging the AWS Global Application
+## Leveraging the AWS Global Application
  Global DNS: Route 53
 It is great to route users to the closet deployment with the least latency ○ Great for disaster recovery strategies
  Global Content Delivery Network (CDN): CloudFront
@@ -153,7 +156,8 @@ Ultra-low latency applications
  AWS Local Zones
 Brings AWS resources (compute, database, storage, …) closer to your users
 Good for latency-sensitive applications
-Cloud Integration
+
+## Cloud Integration
 SQS (Simple Queue Service): produce messages in the queue
 Queue service in AWS
 Multiple Producers, messages are kept up to 14 days
@@ -166,7 +170,8 @@ Multiple Subscribers, send all messages to all of them
 No message retention
 Kinesis — Real-time data streaming, persistence, and analysis
 Amazon MQ — Managed message broker for ActiveMQ and RabbitMQ in the cloud (MQTT, AMQP… protocols)
-Cloud Monitoring
+
+## Cloud Monitoring
  CloudWatch
 Metrics — Monitor the performance of AWS services and billing metrics ○ Alarms — Automate notification, perform EC2 action, notify to SNS based on metrics
 Logs — Collect log files from EC2 instances, servers, Lambda functions… ○ Events (or EventBridge) — React to events in AWS, or trigger a rule on a schedule
@@ -176,7 +181,8 @@ X-Ray — Trace requests made through your distributed applications
 AWS Health Dashboard — Status of all AWS services across all regions
 AWS Account Health Dashboard — AWS events that impact your infrastructure
 Amazon CodeGuru — Automated code reviews and application performance recommendations
-AWS Security & Compliance
+
+## AWS Security & Compliance
 Artifact — Get access to compliance reports such as PCI, ISO, etc …
 Share Responsibility on AWS
 Sheild — Automatic DDoS Protection + 24/7 support for advanced
@@ -198,7 +204,7 @@ Close your AWS account
 Change or cancel your AWS Support plan
 Register as a seller in the Reserved Instance Marketplace
 
-AWS Machine Learning
+## AWS Machine Learning
 Rekognition — Face detection, labeling, celebrity recognition
 Transcribe — Audio to Text (e.g. subtitles)
 Polly — Text to Audio
@@ -212,7 +218,7 @@ Kendra — ML-powered search engine
 Personalize — Real-time personalized recommendations
 Textact — Detect text and data in documents
 
-AWS VPC & Network
+## AWS VPC & Network
 VPC — Virtual Private Cloud
 Subnets — Tied to an AZ, network partition of the VPC
 Internet Gateway — At the VPC level, provide Internet Access
@@ -229,7 +235,7 @@ Client VPN — OpenVPN connection from your computer into your VPC
 Direct Connect — Direct private connection to AWS
 Transit Gateway — Connect thousands of VPC and on-premises networks together
 
-Account Best Practices
+## Account Best Practices
 Operate multiple accounts using Organizations
 Use SCP (service control policies) to restrict account power
 Easily setup multiple accounts with best-practices with AWS Control Tower
@@ -241,7 +247,7 @@ Trusted Advisor to get insights, Support Plan adapted to your needs
 If your Account is compromised — change the root password, delete and rotate all passwords/keys, contact the AWS support
  Allow users to create pre-defined stacks defined by admins using AWS Service Catalog
 
-Billing and Costing Tools
+## Billing and Costing Tools
 Compute Optimizer — Recommends resources’ configuration to reduce cost
 Pricing Calculator — Cost of services on AWS
 Billing Dashboard — High-level overview + free tier dashboard
@@ -254,7 +260,7 @@ Saving Plans — Easy way to save based on long-term usage of AWS
 Cost Anomaly Detection — Detect unusual spends using Machine Learning
 Service Quotas — Notify you when you’re close to the service quota threshold
 
-Advanced Identity
+## Advanced Identity
  IAM
 Identity and Access Management inside your AWS account
 For users that you trust and belong to your company
@@ -264,7 +270,7 @@ Cognito — Create a database of users for your mobile & web applications
 Directory Services — Integrate Microsoft Active Directory in AWS
 IAM Identify Center — One login for multiple AWS accounts & applications
 
-AWS Support Plan
+## AWS Support Plan
 There are four AWS support plans available:
 Basic — billing and account support only (access to forums only).
 Developer — business hours support via email.
@@ -273,7 +279,7 @@ Enterprise — 24×7 email, chat, and phone support.
 
 
 
-AWS Well-Architected and the Six Pillars
+## AWS Well-Architected and the Six Pillars
 The AWS Well-Architected Framework describes key concepts, design principles, and architectural best practices for designing and running workloads in the cloud.
 By answering a few foundational questions, learn how well your architecture aligns with cloud best practices and gain guidance for making improvements.
 
@@ -284,7 +290,7 @@ By answering a few foundational questions, learn how well your architecture alig
 Cost Optimisation Pillar — The cost optimisation pillar focuses on avoiding unnecessary costs. Key topics include understanding spending over time and controlling fund allocation, selecting resources of the right type and quantity, and scaling to meet business needs without overspending.
  Sustainability Pillar — The sustainability pillar focuses on minimizing the environmental impacts of running cloud workloads. Key topics include a shared responsibility model for sustainability, understanding impact, and maximizing utilization to minimize required resources and reduce downstream impacts.
 
-AWS Cloud Adoption Framework (AWS CAF)
+## AWS Cloud Adoption Framework (AWS CAF)
 
 Other Services
  Amazon WorkSpace
