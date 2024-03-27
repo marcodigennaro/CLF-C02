@@ -95,7 +95,7 @@ Notes for the CLF-C02 exam
   - Integrated with the ELB
 
 ## Storage
-  - **S3** Simple Storage Service
+  - **S3** Simple Storage Service. Objects have key, data, metadata.
   - **EFS** Elastic File System. No root storage, mounted to store data
     - **EFS IA** Infrequent Access
   - **EBS** Elastic Block Store = Block based storage for EC2
@@ -103,11 +103,9 @@ Notes for the CLF-C02 exam
   - **EC2** Instance Store -> short term storage
   - Access: standard, infrequent, archivial ( = glacier )
 
-| Object Storage | Block Storage | File Storage |
-|----------------|---------------|--------------|
-| key ||
-| data ||
-| metadata ||
+| Object | Block | File |
+|--------|-------|------|
+| S3     | EBS   | EFS, FxS |
 
 ## Amazon S3
   - Simple Storage System
