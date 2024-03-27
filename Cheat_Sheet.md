@@ -21,13 +21,14 @@ AWS Cloud Practitioner Certification Cheat Sheet
 - AWS Regional Services List
 
 ## IAM (Identity and Access Management)
-- Users Mapped to a physical user, has a password for AWS Console
-- Groups Contains users only
-- Policies JSON document that outlines permissions for users or groups
-- Roles For EC2 instants or AWS services
+- Authorization vs Authentication
+- Users mapped to a physical user, has a password for AWS Console
+- Groups Contains Users only
+- **Policies** = JSON document that outlines permissions for users or groups
+- **Roles** = For EC2 instants or AWS services
 - Security MFA + Password Policy
-- AWS CLI Manage your AWS services using the command-line
-- AWS SDK Manage your AWS services using a programming language
+- **AWS CLI** Manage your AWS services using the Command Line Interface
+- **AWS SDK** Manage your AWS services using a programming language Software Development Kit
 - Access Keys Access AWS using the CLI or SDK
 - Audit IAM Credential Reports & IAM Access Advisor
 
