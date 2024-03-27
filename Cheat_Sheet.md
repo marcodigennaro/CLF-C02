@@ -67,7 +67,7 @@ AWS Cloud Practitioner Certification Cheat Sheet
   - Capacity Reservation
 
 ## EC2 Instance Storage
-- **EBS Volumes**
+- **EBS** = Elastic Block Store
   - Network drives attached to one EC2 instance at a time
   - Mapped to an Availability Zones
   - Can use EBS Snapshots for backups/transferring EBS volumes across AZ
@@ -156,182 +156,181 @@ AWS Cloud Practitioner Certification Cheat Sheet
 - **Quick Sight**
 
 ## Other Compute
-Docker — Container technology to run applications
-ECS (Elastic Container Service)— Run docker containers on EC2 instance
-Fargate
-Run Docker containers without provisioning the infrastructure
-Serverless offering (no EC2 instances)
-ECR (Elastic Container Registry) — Private Docker Image Repository
-Batch — Run batch jobs on AWS across managed EC2 instance
-Lightsail — Predictable & low pricing for simple applications & DB
+  - Docker — Container technology to run applications
+  - ECS (Elastic Container Service)— Run docker containers on EC2 instance
+  - Fargate
+  - Run Docker containers without provisioning the infrastructure
+  - Serverless offering (no EC2 instances)
+  - ECR (Elastic Container Registry) — Private Docker Image Repository
+  - Batch — Run batch jobs on AWS across managed EC2 instance
+  - Lightsail — Predictable & low pricing for simple applications & DB
 
 ## Lambda
- Lamba — Serverless, FaaS, seamless scaling, reactive Lambda Billings
-By the time run x by the RAM Provisioned
-By the number of invocations
-Language Support — Many programming languages except (arbitrary) Docker
-Invocation time — up to 15 minutes
-Use cases
-Create Thumbnails for images uploaded onto S3
-Run a Serverless cron job
- API Gateway — Expose Lambda functions as HTTP API
+Lamba — Serverless, FaaS, seamless scaling, reactive Lambda Billings
+  - By the time run x by the RAM Provisioned
+  - By the number of invocations
+  - Language Support — Many programming languages except (arbitrary) Docker
+  - Invocation time — up to 15 minutes
+  - Use cases
+  - Create Thumbnails for images uploaded onto S3
+  - Run a Serverless cron job
+  -  API Gateway — Expose Lambda functions as HTTP API
 
 ## Deployment
- CloudFormation (AWS only)
-Infrastructure as Code, works with almost all AWS resources ○ Repeat across Regions & accounts
- Beanstalk (AWS only)
-Platform as a Service (PaaS), limited to certain programming languages or Docker
-Deploy code consistently with a known architecture: ex, ALB+BC+RDS
-CodeDeploy (Hybrid) — Deploy & upgrade any application onto servers
-Systems Manager (Hybrid) — Patch, configure, and run commands at scale
-OpsWorks (Hybrid) — Managed Chef and Puppet in AWS
-CodeCommit — Store code in private git repository (version controlled)
-CodeBuild — Build & Test code in AWS
-CodeDeploy — Deploy code onto servers
-CodePipeline — Orchestration of pipeline (from code to build to deploy)
-CodeArtifact — Store software packages/dependencies on AWS
-CodeStar — Unified view for allowing developers to do CI/CD and code
-Cloud9 — Cloud IDE with collab
-AWS CDK (Cloud Development Kit) — Defined your cloud infrastructure using a programming language
+  -  CloudFormation (AWS only)
+  - Infrastructure as Code, works with almost all AWS resources ○ Repeat across Regions & accounts
+  -  Beanstalk (AWS only)
+  - Platform as a Service (PaaS), limited to certain programming languages or Docker
+  - Deploy code consistently with a known architecture: ex, ALB+BC+RDS
+  - CodeDeploy (Hybrid) — Deploy & upgrade any application onto servers
+  - Systems Manager (Hybrid) — Patch, configure, and run commands at scale
+  - OpsWorks (Hybrid) — Managed Chef and Puppet in AWS
+  - CodeCommit — Store code in private git repository (version controlled)
+  - CodeBuild — Build & Test code in AWS
+  - CodeDeploy — Deploy code onto servers
+  - CodePipeline — Orchestration of pipeline (from code to build to deploy)
+  - CodeArtifact — Store software packages/dependencies on AWS
+  - CodeStar — Unified view for allowing developers to do CI/CD and code
+  - Cloud9 — Cloud IDE with collab
+  - AWS CDK (Cloud Development Kit) — Defined your cloud infrastructure using a programming language
 
 ## Leveraging the AWS Global Application
- Global DNS: Route 53
-It is great to route users to the closet deployment with the least latency ○ Great for disaster recovery strategies
- Global Content Delivery Network (CDN): CloudFront
-Replicate part of your application to AWS Edge Locations — decrease latency
-Cache common requests — improved user experience and decreased latency
- S3 Transfer Acceleration
-Accelerate global uploads & download into Amazon S3
- AWS Global Accelerator
-Improve global application availability and performance using the AWS global network
- AWS Outposts
-Deploy Outposts Racks in your own Data Centers to extend AWS services
- AWS WaveLenth
-Brings AWS services to the edge of the 5G networks
-Ultra-low latency applications
- AWS Local Zones
-Brings AWS resources (compute, database, storage, …) closer to your users
-Good for latency-sensitive applications
+  -  Global DNS: Route 53
+  - It is great to route users to the closet deployment with the least latency ○ Great for disaster recovery strategies
+  -  Global Content Delivery Network (CDN): CloudFront
+  - Replicate part of your application to AWS Edge Locations — decrease latency
+  - Cache common requests — improved user experience and decreased latency
+  -  S3 Transfer Acceleration
+  - Accelerate global uploads & download into Amazon S3
+  -  AWS Global Accelerator
+  - Improve global application availability and performance using the AWS global network
+  -  AWS Outposts
+  - Deploy Outposts Racks in your own Data Centers to extend AWS services
+  -  AWS WaveLenth
+  - Brings AWS services to the edge of the 5G networks
+  - Ultra-low latency applications
+  -  AWS Local Zones
+  - Brings AWS resources (compute, database, storage, …) closer to your users
+  - Good for latency-sensitive applications
 
 ## Cloud Integration
-SQS (Simple Queue Service): produce messages in the queue
-Queue service in AWS
-Multiple Producers, messages are kept up to 14 days
-Multiple Consumers share the read and delete message
-Used to decouple applications in AWS
- SNS (Simple Notification Service): publish messages in the queue
-Notification service in AWS
-Publisher: Email, Lambda, SQS, HTTP, Mobile, …
-Multiple Subscribers, send all messages to all of them
-No message retention
-Kinesis — Real-time data streaming, persistence, and analysis
-Amazon MQ — Managed message broker for ActiveMQ and RabbitMQ in the cloud (MQTT, AMQP… protocols)
+  - SQS (Simple Queue Service): produce messages in the queue
+  - Queue service in AWS
+  - Multiple Producers, messages are kept up to 14 days
+  - Multiple Consumers share the read and delete message
+  - Used to decouple applications in AWS
+  - SNS (Simple Notification Service): publish messages in the queue
+  - Notification service in AWS
+  - Publisher: Email, Lambda, SQS, HTTP, Mobile, …
+  - Multiple Subscribers, send all messages to all of them
+  - No message retention
+  - Kinesis — Real-time data streaming, persistence, and analysis
+  - Amazon MQ — Managed message broker for ActiveMQ and RabbitMQ in the cloud (MQTT, AMQP… protocols)
 
 ## Cloud Monitoring
- CloudWatch
-Metrics — Monitor the performance of AWS services and billing metrics ○ Alarms — Automate notification, perform EC2 action, notify to SNS based on metrics
-Logs — Collect log files from EC2 instances, servers, Lambda functions… ○ Events (or EventBridge) — React to events in AWS, or trigger a rule on a schedule
-CloudTrail — Audit API calls made within your AWS account
-CloudTrail Insights — Automated analysis of your CloudTrail Events
-X-Ray — Trace requests made through your distributed applications
-AWS Health Dashboard — Status of all AWS services across all regions
-AWS Account Health Dashboard — AWS events that impact your infrastructure
-Amazon CodeGuru — Automated code reviews and application performance recommendations
+  - CloudWatch
+  - Metrics — Monitor the performance of AWS services and billing metrics ○ Alarms — Automate notification, perform EC2 action, notify to SNS based on metrics
+  - Logs — Collect log files from EC2 instances, servers, Lambda functions… ○ Events (or EventBridge) — React to events in AWS, or trigger a rule on a schedule
+  - CloudTrail — Audit API calls made within your AWS account
+  - CloudTrail Insights — Automated analysis of your CloudTrail Events
+  - X-Ray — Trace requests made through your distributed applications
+  - AWS Health Dashboard — Status of all AWS services across all regions
+  - AWS Account Health Dashboard — AWS events that impact your infrastructure
+  - Amazon CodeGuru — Automated code reviews and application performance recommendations
 
 ## AWS Security & Compliance
-Artifact — Get access to compliance reports such as PCI, ISO, etc …
-Share Responsibility on AWS
-Sheild — Automatic DDoS Protection + 24/7 support for advanced
-WAF — Firewall to filter incoming requests based on rules
-KMS — Encryption keys managed by AWS
-CloudHSM — Hardware encryption, we manage encryption keys
-AWS Certificate Manager — Provision, manage, and deploy SSL/TLS certificates
-GuardDuty — Find malicious behavior with VPC, DNS & CloudTrail Logs
-Inspector — Find software vulnerabilities in EC2, ECR images, and Lambda functions
-Network Firewall — Protect VPC against network attacks
-Config — Track config changes and compliance against rules
-Macie — Find sensitive data (e.g. PII data) in Amazon S3 buckets
-CloudTrail — Track API calls made by users within an account
-Amazon Detective — Find the root cause of security issues or suspicious activities
-AWS Abuse — Report AWS resources used for abusive or illegal purposes
-Root user privileges
-Change account setting
-Close your AWS account
-Change or cancel your AWS Support plan
-Register as a seller in the Reserved Instance Marketplace
+  - Artifact — Get access to compliance reports such as PCI, ISO, etc …
+  - Share Responsibility on AWS
+  - Sheild — Automatic DDoS Protection + 24/7 support for advanced
+  - WAF — Firewall to filter incoming requests based on rules
+  - KMS — Encryption keys managed by AWS
+  - CloudHSM — Hardware encryption, we manage encryption keys
+  - AWS Certificate Manager — Provision, manage, and deploy SSL/TLS certificates
+  - GuardDuty — Find malicious behavior with VPC, DNS & CloudTrail Logs
+  - Inspector — Find software vulnerabilities in EC2, ECR images, and Lambda functions
+  - Network Firewall — Protect VPC against network attacks
+  - Config — Track config changes and compliance against rules
+  - Macie — Find sensitive data (e.g. PII data) in Amazon S3 buckets
+  - CloudTrail — Track API calls made by users within an account
+  - Amazon Detective — Find the root cause of security issues or suspicious activities
+  - AWS Abuse — Report AWS resources used for abusive or illegal purposes
+  - Root user privileges
+  - Change account setting
+  - Close your AWS account
+  - Change or cancel your AWS Support plan
+  - Register as a seller in the Reserved Instance Marketplace
 
 ## AWS Machine Learning
-Rekognition — Face detection, labeling, celebrity recognition
-Transcribe — Audio to Text (e.g. subtitles)
-Polly — Text to Audio
-Translate — Translations
-Lex — Build conversation bots (e.g. chatbots), (like Alexa)
-Connect — Cloud contact center
-Comprehend — Natural Language Processing
-SageMaker — Machine Learning for every developer and data scientist
-Forecast — Build highly accurate forecasts
-Kendra — ML-powered search engine
-Personalize — Real-time personalized recommendations
-Textact — Detect text and data in documents
+  - Rekognition — Face detection, labeling, celebrity recognition
+  - Transcribe — Audio to Text (e.g. subtitles)
+  - Polly — Text to Audio
+  - Translate — Translations
+  - Lex — Build conversation bots (e.g. chatbots), (like Alexa)
+  - Connect — Cloud contact center
+  - Comprehend — Natural Language Processing
+  - SageMaker — Machine Learning for every developer and data scientist
+  - Forecast — Build highly accurate forecasts
+  - Kendra — ML-powered search engine
+  - Personalize — Real-time personalized recommendations
+  - Textact — Detect text and data in documents
 
 ## AWS VPC & Network
-VPC — Virtual Private Cloud
-Subnets — Tied to an AZ, network partition of the VPC
-Internet Gateway — At the VPC level, provide Internet Access
-NAT Gateway / Instances — Give internet access to private subnets
-NACL — Stateless, subnet rules for inbound and outbound
-Security Groups — Stateful, operate at the EC2 instance level or ENI
-VPC Peering — Connect two VPC with non-overlapping IP ranges, nontransitive
-Elastic IP — Fixed public IPv4, ongoing cost if not in-use
-VPC Endpoints — Provide Private access to AWS Services within VPC
-PrivateLink — Privately connect to a service in a 3rd party VPC
-VPC Flow Logs — network traffic logs
-Site to Site VPN — VPN over public internet between op-premises DC and AWS
-Client VPN — OpenVPN connection from your computer into your VPC
-Direct Connect — Direct private connection to AWS
-Transit Gateway — Connect thousands of VPC and on-premises networks together
+  - VPC — Virtual Private Cloud
+  - Subnets — Tied to an AZ, network partition of the VPC
+  - Internet Gateway — At the VPC level, provide Internet Access
+  - NAT Gateway / Instances — Give internet access to private subnets
+  - NACL — Stateless, subnet rules for inbound and outbound
+  - Security Groups — Stateful, operate at the EC2 instance level or ENI
+  - VPC Peering — Connect two VPC with non-overlapping IP ranges, nontransitive
+  - Elastic IP — Fixed public IPv4, ongoing cost if not in-use
+  - VPC Endpoints — Provide Private access to AWS Services within VPC
+  - PrivateLink — Privately connect to a service in a 3rd party VPC
+  - VPC Flow Logs — network traffic logs
+  - Site to Site VPN — VPN over public internet between op-premises DC and AWS
+  - Client VPN — OpenVPN connection from your computer into your VPC
+  - Direct Connect — Direct private connection to AWS
+  - Transit Gateway — Connect thousands of VPC and on-premises networks together
 
 ## Account Best Practices
-Operate multiple accounts using Organizations
-Use SCP (service control policies) to restrict account power
-Easily setup multiple accounts with best-practices with AWS Control Tower
-Use Tags & Cost Allocation Tags for easy management & billing
-IAM guidelines — MFA, least-privilege, password policy, password rotation
-Cofig To record all resources configurations & compliance over time
-CloudFormation to deploy stack across accounts and regions
-Trusted Advisor to get insights, Support Plan adapted to your needs
-If your Account is compromised — change the root password, delete and rotate all passwords/keys, contact the AWS support
- Allow users to create pre-defined stacks defined by admins using AWS Service Catalog
+  - Operate multiple accounts using Organizations
+  - Use SCP (service control policies) to restrict account power
+  - Easily setup multiple accounts with best-practices with AWS Control Tower
+  - Use Tags & Cost Allocation Tags for easy management & billing
+  - IAM guidelines — MFA, least-privilege, password policy, password rotation
+  - Cofig To record all resources configurations & compliance over time
+  - CloudFormation to deploy stack across accounts and regions
+  - Trusted Advisor to get insights, Support Plan adapted to your needs
+  - If your Account is compromised — change the root password, delete and rotate all passwords/keys, contact the AWS support
+  - Allow users to create pre-defined stacks defined by admins using AWS Service Catalog
 
 ## Billing and Costing Tools
-Compute Optimizer — Recommends resources’ configuration to reduce cost
-Pricing Calculator — Cost of services on AWS
-Billing Dashboard — High-level overview + free tier dashboard
-Cost Allocation Tags — Tag resources to create detailed reports
-Cost and Usage Reports — The most comprehensive billing dataset
-Cost Explorer — View current usage (detailed) and forecast usage
-Billing Alarms — in us-east-1 — track overall and per-service billing
-Budges — More advanced — track usage, costs, RI, and get alerts
-Saving Plans — Easy way to save based on long-term usage of AWS
-Cost Anomaly Detection — Detect unusual spends using Machine Learning
-Service Quotas — Notify you when you’re close to the service quota threshold
+  - Compute Optimizer — Recommends resources’ configuration to reduce cost
+  - Pricing Calculator — Cost of services on AWS
+  - Billing Dashboard — High-level overview + free tier dashboard
+  - Cost Allocation Tags — Tag resources to create detailed reports
+  - Cost and Usage Reports — The most comprehensive billing dataset
+  - Cost Explorer — View current usage (detailed) and forecast usage
+  - Billing Alarms — in us-east-1 — track overall and per-service billing
+  - Budges — More advanced — track usage, costs, RI, and get alerts
+  - Saving Plans — Easy way to save based on long-term usage of AWS
+  - Cost Anomaly Detection — Detect unusual spends using Machine Learning
+  - Service Quotas — Notify you when you’re close to the service quota threshold
 
 ## Advanced Identity
- IAM
-Identity and Access Management inside your AWS account
-For users that you trust and belong to your company
+- **IAM** Identity and Access Management inside your AWS account
+- For users that you trust and belong to your company
 Organizations — Manage multiple accounts
-Security Token Service (STS) — temporary, limited-privileges credentials to access AWS resources
-Cognito — Create a database of users for your mobile & web applications
-Directory Services — Integrate Microsoft Active Directory in AWS
-IAM Identify Center — One login for multiple AWS accounts & applications
+  - Security Token Service (STS) — temporary, limited-privileges credentials to access AWS resources
+  - Cognito — Create a database of users for your mobile & web applications
+  - Directory Services — Integrate Microsoft Active Directory in AWS
+  - IAM Identify Center — One login for multiple AWS accounts & applications
 
 ## AWS Support Plan
 There are four AWS support plans available:
-Basic — billing and account support only (access to forums only).
-Developer — business hours support via email.
-Business — 24×7 email, chat, and phone support.
-Enterprise — 24×7 email, chat, and phone support.
+- Basic — billing and account support only (access to forums only).
+- Developer — business hours support via email.
+- Business — 24×7 email, chat, and phone support.
+- Enterprise — 24×7 email, chat, and phone support.
 
 
 
@@ -339,12 +338,12 @@ Enterprise — 24×7 email, chat, and phone support.
 The AWS Well-Architected Framework describes key concepts, design principles, and architectural best practices for designing and running workloads in the cloud.
 By answering a few foundational questions, learn how well your architecture aligns with cloud best practices and gain guidance for making improvements.
 
- Operational Excellence Pillar — Includes the ability to run and monitor systems to deliver business value and to continually improve supporting processes and procedures
- Performance Efficiency Pillar — The performance efficiency pillar focuses on the structured and streamlined allocation of IT and computing resources. Key topics include selecting resource types and sizes optimized for workload requirements, monitoring performance, and maintaining efficiency as business needs evolve.
- Reliability Pillar — The reliability pillar focuses on workloads performing their intended functions and how to recover quickly from failure to meet demands. Key topics include distributed system design, recovery planning, and adapting to changing requirements.
- Security Pillar — The security pillar focuses on protecting information and systems. Key topics include confidentiality and integrity of data, managing user permissions, and establishing controls to detect security events.
-Cost Optimisation Pillar — The cost optimisation pillar focuses on avoiding unnecessary costs. Key topics include understanding spending over time and controlling fund allocation, selecting resources of the right type and quantity, and scaling to meet business needs without overspending.
- Sustainability Pillar — The sustainability pillar focuses on minimizing the environmental impacts of running cloud workloads. Key topics include a shared responsibility model for sustainability, understanding impact, and maximizing utilization to minimize required resources and reduce downstream impacts.
+- Operational Excellence Pillar — Includes the ability to run and monitor systems to deliver business value and to continually improve supporting processes and procedures
+- Performance Efficiency Pillar — The performance efficiency pillar focuses on the structured and streamlined allocation of IT and computing resources. Key topics include selecting resource types and sizes optimized for workload requirements, monitoring performance, and maintaining efficiency as business needs evolve.
+- Reliability Pillar — The reliability pillar focuses on workloads performing their intended functions and how to recover quickly from failure to meet demands. Key topics include distributed system design, recovery planning, and adapting to changing requirements.
+- Security Pillar — The security pillar focuses on protecting information and systems. Key topics include confidentiality and integrity of data, managing user permissions, and establishing controls to detect security events.
+- Cost Optimisation Pillar — The cost optimisation pillar focuses on avoiding unnecessary costs. Key topics include understanding spending over time and controlling fund allocation, selecting resources of the right type and quantity, and scaling to meet business needs without overspending.
+- Sustainability Pillar — The sustainability pillar focuses on minimizing the environmental impacts of running cloud workloads. Key topics include a shared responsibility model for sustainability, understanding impact, and maximizing utilization to minimize required resources and reduce downstream impacts.
 
 ## AWS Cloud Adoption Framework (AWS CAF)
 
@@ -378,23 +377,23 @@ Move large amounts of data from on-premises to AWS
 Replication tasks can be scheduled hourly, daily, weekly
 The replication tasks are incremental after the first full load
 
- AWS Application Discovery Service
-Plan migration projects by gathering information about on-premises data centers
-Server utilization data and dependency mapping are important for migrations 
-Agentless Discovery (AWS Agentless Discovery Connector) → VM inventory, configuration, and performance history such as CPU, memory, and disk usage 
-Agent-based Discovery (AWS Application Discovery Agent) → System configuration, system performance, running processes, and details of the network connections between systems
-Resulting data can be viewed within AWS Migration Hub
-AWS Application Migration Service (MNG)
-AWS Migration Evaluator
-AWS Migration Hub
-Central location to collect servers and applications inventory data for the assessment, planning, and tracking of migrations to AWS
-Helps accelerate your migration to AWS, automate lift-and-shift
-AWS Migration Hub Orchestrator — provides pre-built templates to save time and effort migrating enterprise apps (e.g., SAP, Microsoft SQL Server…)
-Supports migrations status updates from Application Migration Service
+## AWS Application Discovery Service
+- Plan migration projects by gathering information about on-premises data centers
+- Server utilization data and dependency mapping are important for migrations 
+- Agentless Discovery (AWS Agentless Discovery Connector) → VM inventory, configuration, and performance history such as CPU, memory, and disk usage 
+- Agent-based Discovery (AWS Application Discovery Agent) → System configuration, system performance, running processes, and details of the network connections between systems
+- Resulting data can be viewed within AWS Migration Hub
+- AWS Application Migration Service (MNG)
+- AWS Migration Evaluator
+- AWS Migration Hub
+- Central location to collect servers and applications inventory data for the assessment, planning, and tracking of migrations to AWS
+- Helps accelerate your migration to AWS, automate lift-and-shift
+- AWS Migration Hub Orchestrator — provides pre-built templates to save time and effort migrating enterprise apps (e.g., SAP, Microsoft SQL Server…)
+- Supports migrations status updates from Application Migration Service
 
-(MGN) and Database Migration Service (DMS)  AWS Fault Injection Simulator (FIS)
-A fully managed service for running fault injection experiments on AWS workloads
-Based on Chaos Engineering — stressing an application by creating disruptive events (e.g., a sudden increase in CPU or memory), observing how the system responds, and implementing improvements
+## (MGN) and Database Migration Service (DMS)  AWS Fault Injection Simulator (FIS)
+- A fully managed service for running fault injection experiments on AWS workloads
+- Based on Chaos Engineering — stressing an application by creating disruptive events (e.g., a sudden increase in CPU or memory), observing how the system responds, and implementing improvements
 AWS Step Functions
 Build a serverless visual workflow to orchestrate your Lambda functions
 Use cases: order fulfillment, data processing, web applications, any workflow
