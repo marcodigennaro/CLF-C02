@@ -6,7 +6,14 @@ AWS Cloud Practitioner Certification Cheat Sheet
 - 5 Characteristics of CC 
 - 4 Benefits of CC: Agility, Elasticity, Cost Savings, Deploy globally in minutes 
 - 3 types of CC IaaS, PaaS, SaaS
-- 6 Categories and colors
+
+## 6 Categories and colors
+- Orange: Compute
+- Purple: Network
+- Pink: Governance and Monitoring
+- Blue: Database
+- Red: Security
+- Green: Storage
 
 ## Pricing 
 - Compute: by CPU time
@@ -94,9 +101,13 @@ AWS Cloud Practitioner Certification Cheat Sheet
   - **EFS** Elastic File System. No root storage, mounted to store data
     - **EFS IA** Infrequent Access
   - **EBS** Elastic Block Store = Block based storage for EC2
--------------------------------------------------
+  - Access: standard, infrequent, archivial ( = glacier )
+
 | Object Storage | Block Storage | File Storage |
--------------------------------------------------
+|----------------|---------------|--------------|
+| key ||
+| data ||
+| metadata ||
 
 ## Amazon S3
   - Buckets vs Objects — global unique name, tied to a region
@@ -105,7 +116,9 @@ AWS Cloud Practitioner Certification Cheat Sheet
   - S3 Versioning — Multiple versions for files, prevent accidental deletes
   - S3 Replication — Same-region or cross-region, must enable versioning
   - S3 Storage Classes — Standard, IA, 1Z-IA, Intelligent, Glacier (Instant, Flexible, Deep)
-  - Snow Family — Import data onto S3 through a physical device, edge computing
+  - Snow Family
+    — Import data onto S3 through a physical device, edge computing
+    - Compute optimized vs Storage optimized
     - SnowCone & SnowCone SSD — Storage capacity → 8TB HDD, 14TB SSD, Storage capacity → 8TB size up to 24TB, online and offline
     - Snowball Edge & Storage Optimized — Storage capacity → 80TB usable, Storage capacity → up to Petabytes, offline
     - SnowMobile — Storage capacity → < 100PB, Storage capacity → up to Exabytes, offline
