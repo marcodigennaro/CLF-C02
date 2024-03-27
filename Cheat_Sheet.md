@@ -7,7 +7,7 @@ Notes for the CLF-C02 exam
 - 4 Benefits of CC: Agility, Elasticity, Cost Savings, Deploy globally in minutes 
 - 3 types of CC IaaS, PaaS, SaaS
 
-#### 6 Categories and colors
+### 6 Categories and colors
 - Orange: Compute
 - Purple: Network
 - Pink: Governance and Monitoring
@@ -35,7 +35,7 @@ Notes for the CLF-C02 exam
 - Cost Optimization
 - Sustainability
   
-# IAM (Identity and Access Management)
+### IAM (Identity and Access Management)
 - Authorization vs Authentication
 - Users mapped to a physical user, has a password for AWS Console
 - Groups Contains Users only
@@ -49,7 +49,7 @@ Notes for the CLF-C02 exam
 - Access Keys Access AWS using the CLI or SDK
 - Audit IAM Credential Reports & IAM Access Advisor
 
-# EC2 (Elastic Compute Cloud)
+### EC2 (Elastic Compute Cloud)
 - EC2 Instance
   - Boot strapping: lauch command when computer starts , aka automate boot tasks
   - AMI(OS) + Instance Size (CPU + RAM) + Storage + Security Group + EC2 User Data
@@ -66,38 +66,38 @@ Notes for the CLF-C02 exam
   - Dedicated Instance
   - Capacity Reservation
 
-# Storage
-  - **S3** Simple Storage Service. Objects have key, data, metadata.
-  - **EFS** Elastic File System. No root storage, mounted to store data
-    - **EFS IA** Infrequent Access
-  - **EBS** Elastic Block Store = Block based storage for EC2
-  - **AMI** Amazon Machine Image
-  - **EC2** Instance Store -> short term storage
-  - Access: standard, infrequent, archivial ( = glacier )
+### Storage
+- **S3** Simple Storage Service. Objects have key, data, metadata.
+- **EFS** Elastic File System. No root storage, mounted to store data
+  - **EFS IA** Infrequent Access
+- **EBS** Elastic Block Store = Block based storage for EC2
+- **AMI** Amazon Machine Image
+- **EC2** Instance Store -> short term storage
+- Access: standard, infrequent, archivial ( = glacier )
 
 | Object | Block | File |
 |--------|-------|------|
 | S3     | EBS   | EFS, FxS |
 
 ### Amazon S3
-  - Can not be attached to EC2 instance
-  - accessed by REST API
-  - Buckets vs Objects — global unique name, tied to a region
-  - S3 Security — IAM policy, S3 Bucket Policy (public access), S3 Encryption
-  - S3 Websites — Host a static website on Amazon S3
-  - S3 Versioning — Multiple versions for files, prevent accidental deletes
-  - S3 Replication — Same-region or cross-region, must enable versioning
-  - S3 Storage Classes — Standard, IA, 1Z-IA, Intelligent, Glacier (Instant, Flexible, Deep)
-  - Snow Family
-    — Import data onto S3 through a physical device, edge computing
-    - Compute optimized vs Storage optimized
-    - SnowCone & SnowCone SSD — Storage capacity → 8TB HDD, 14TB SSD, Storage capacity → 8TB size up to 24TB, online and offline
-    - Snowball Edge & Storage Optimized — Storage capacity → 80TB usable, Storage capacity → up to Petabytes, offline
-    - SnowMobile — Storage capacity → < 100PB, Storage capacity → up to Exabytes, offline
-  - OpsHub — Desktop application to manage Snow Family devices
-  - Storage Gateway — Hybrid solution to extend on-premises storage to S3 
+- Can not be attached to EC2 instance
+- accessed by REST API
+- Buckets vs Objects — global unique name, tied to a region
+- S3 Security — IAM policy, S3 Bucket Policy (public access), S3 Encryption
+- S3 Websites — Host a static website on Amazon S3
+- S3 Versioning — Multiple versions for files, prevent accidental deletes
+- S3 Replication — Same-region or cross-region, must enable versioning
+- S3 Storage Classes — Standard, IA, 1Z-IA, Intelligent, Glacier (Instant, Flexible, Deep)
+- Snow Family
+  — Import data onto S3 through a physical device, edge computing
+  - Compute optimized vs Storage optimized
+  - SnowCone & SnowCone SSD — Storage capacity → 8TB HDD, 14TB SSD, Storage capacity → 8TB size up to 24TB, online and offline
+  - Snowball Edge & Storage Optimized — Storage capacity → 80TB usable, Storage capacity → up to Petabytes, offline
+  - SnowMobile — Storage capacity → < 100PB, Storage capacity → up to Exabytes, offline
+- OpsHub — Desktop application to manage Snow Family devices
+- Storage Gateway — Hybrid solution to extend on-premises storage to S3 
 
-## EC2 Instance Storage
+### EC2 Instance Storage
 - **EBS** = Elastic Block Store
   - Network drives attached to one EC2 instance at a time
   - Mapped to an Availability Zones
@@ -112,7 +112,7 @@ Notes for the CLF-C02 exam
 - FSx for Windows — Network File System for Windows servers
 - FSx for Lustre — High-Performance Computing Linux file system
 
-## ELB & ASG
+### ELB & ASG
 - High Availability vs Scalability (vertical and horizontal) vs Elasticity vs Agility in the Cloud
 - Elastic Load Balancers (ELB):
   - Distribute traffic across backend EC2 instances, can be Multi-AZ
@@ -125,9 +125,7 @@ Notes for the CLF-C02 exam
   - Scale EC2 instances based on the demand on your system, and replace unhealthy
   - Integrated with the ELB
 
-
-
-# Databases & Analytics
+### Databases & Analytics
 - Database vs Engine
 - Non Relational Databases: Need for speed = key + value
   - **DynamoDB (serverless)
@@ -154,7 +152,7 @@ Notes for the CLF-C02 exam
 - **Time Stream**
 - **Quick Sight**
 
-# Serverless Compute: FaaS
+### Serverless Compute: FaaS
 - **Lamba** — Serverless, FaaS, seamless scaling, reactive 
   - **Lambda Billings**
     - By the time run x by the RAM Provisioned
@@ -170,49 +168,51 @@ Notes for the CLF-C02 exam
   - **Batch** — Run batch jobs on AWS across managed EC2 instance
   - **Lightsail** — Predictable & low pricing for simple applications & DB
 
-# Deployment
-  - **CloudFormation**
-    - Cost
-    - Productivity
-    - IaaC: Infrastructure as a Code
-    - Need to repeat architecture in different settings: environment, region or account
-    - CFT: Cloud Formation Template
+### Deployment
+- **CloudFormation**
+  - Cost
+  - Productivity
+  - IaaC: Infrastructure as a Code
+  - Need to repeat architecture in different settings: environment, region or account
+  - CFT: Cloud Formation Template
       
-  - **Beanstalk**
-    - PaaS: Platform as a Service
-    - Health Monitoring
+- **Beanstalk**
+  - PaaS: Platform as a Service
+  - Health Monitoring
       
-  - AWS CDK (Cloud Development Kit) — Defined your cloud infrastructure using a programming language
-  - CodeDeploy (Hybrid) — Deploy & upgrade any application onto servers
-  - CodeCommit — private git repository/version control
-  - CodeBuild — Build & Test code
-  - CodePipeline — Orchestration of pipeline (from code to build to deploy)
-  - CodeArtifact — Store software packages/dependencies on AWS
-  - CodeStar — Unified view for allowing developers to do CI/CD and code
-  - Cloud9 — Cloud IDE with collab
-  - Systems Manager (Hybrid) — Patch, configure, and run commands at scale
-  - OpsWorks (Hybrid) — Managed Chef and Puppet in AWS
+- AWS CDK (Cloud Development Kit) — Defined your cloud infrastructure using a programming language
+- CodeDeploy (Hybrid) — Deploy & upgrade any application onto servers
+- CodeCommit — private git repository/version control
+- CodeBuild — Build & Test code
+- CodePipeline — Orchestration of pipeline (from code to build to deploy)
+- CodeArtifact — Store software packages/dependencies on AWS
+- CodeStar — Unified view for allowing developers to do CI/CD and code
+- Cloud9 — Cloud IDE with collab
+- Systems Manager (Hybrid) — Patch, configure, and run commands at scale
+- OpsWorks (Hybrid) — Managed Chef and Puppet in AWS
 
-## Leveraging the AWS Global Application
-  - Global DNS: Route 53
-  - It is great to route users to the closet deployment with the least latency ○ Great for disaster recovery strategies
-  - Global Content Delivery Network (CDN): CloudFront
+### Leveraging the AWS Global Application
+Latency, Disaster Recovery, Attack
+- **Route 53**
+  - Global, managed Domain Name System (DNS)  
+  - It is great to route users to the closet deployment with the least latency
+  - Great for disaster recovery strategies
+  - Routing Policy: simple or weighted or latency or failover
+- **CloudFront** Global Content Delivery Network (CDN): 
   - Replicate part of your application to AWS Edge Locations — decrease latency
   - Cache common requests — improved user experience and decreased latency
-  - S3 Transfer Acceleration
-  - Accelerate global uploads & download into Amazon S3
-  - AWS Global Accelerator
-  - Improve global application availability and performance using the AWS global network
-  - AWS Outposts
+- **S3 Transfer Acceleration** Accelerate global uploads & download into Amazon S3 with private AWS network
+- **AWS Global Accelerator** Improve global application availability and performance using the AWS global network
+- **AWS Outposts**
   - Deploy Outposts Racks in your own Data Centers to extend AWS services
-  - AWS WaveLenth
+- **AWS WaveLenth**
   - Brings AWS services to the edge of the 5G networks
   - Ultra-low latency applications
-  - AWS Local Zones
+- **AWS Local Zones**
   - Brings AWS resources (compute, database, storage, …) closer to your users
   - Good for latency-sensitive applications
 
-## Cloud Integration
+### Cloud Integration
   - SQS (Simple Queue Service): produce messages in the queue
   - Queue service in AWS
   - Multiple Producers, messages are kept up to 14 days
