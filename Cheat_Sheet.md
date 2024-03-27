@@ -154,30 +154,26 @@ Notes for the CLF-C02 exam
 - **Quick Sight**
 
 ## Other Compute
-  - Docker — Container technology to run applications
-  - ECS (Elastic Container Service)— Run docker containers on EC2 instance
-  - Fargate
-  - Run Docker containers without provisioning the infrastructure
-  - Serverless offering (no EC2 instances)
-  - ECR (Elastic Container Registry) — Private Docker Image Repository
-  - Batch — Run batch jobs on AWS across managed EC2 instance
-  - Lightsail — Predictable & low pricing for simple applications & DB
+  - **ECS** Elastic Container Service — Run docker containers on EC2 instance
+  - **Fargate**
+    - Run Docker containers without provisioning the infrastructure
+    - Serverless offering (no EC2 instances)
+  - **ECR** Elastic Container Registr) — Private Docker Image Repository
+  - **Batch** — Run batch jobs on AWS across managed EC2 instance
+  - **Lightsail** — Predictable & low pricing for simple applications & DB
 
 ## Lambda
-Lamba — Serverless, FaaS, seamless scaling, reactive Lambda Billings
-  - By the time run x by the RAM Provisioned
-  - By the number of invocations
+**Lamba** — Serverless, FaaS, seamless scaling, reactive 
+  - **Lambda Billings**
+    - By the time run x by the RAM Provisioned
+    - By the number of invocations
   - Language Support — Many programming languages except (arbitrary) Docker
   - Invocation time — up to 15 minutes
-  - Use cases
-  - Create Thumbnails for images uploaded onto S3
-  - Run a Serverless cron job
-  -  API Gateway — Expose Lambda functions as HTTP API
 
 ## Deployment
-  -  CloudFormation (AWS only)
+  - CloudFormation (AWS only)
   - Infrastructure as Code, works with almost all AWS resources ○ Repeat across Regions & accounts
-  -  Beanstalk (AWS only)
+  - Beanstalk (AWS only)
   - Platform as a Service (PaaS), limited to certain programming languages or Docker
   - Deploy code consistently with a known architecture: ex, ALB+BC+RDS
   - CodeDeploy (Hybrid) — Deploy & upgrade any application onto servers
@@ -193,21 +189,21 @@ Lamba — Serverless, FaaS, seamless scaling, reactive Lambda Billings
   - AWS CDK (Cloud Development Kit) — Defined your cloud infrastructure using a programming language
 
 ## Leveraging the AWS Global Application
-  -  Global DNS: Route 53
+  - Global DNS: Route 53
   - It is great to route users to the closet deployment with the least latency ○ Great for disaster recovery strategies
-  -  Global Content Delivery Network (CDN): CloudFront
+  - Global Content Delivery Network (CDN): CloudFront
   - Replicate part of your application to AWS Edge Locations — decrease latency
   - Cache common requests — improved user experience and decreased latency
-  -  S3 Transfer Acceleration
+  - S3 Transfer Acceleration
   - Accelerate global uploads & download into Amazon S3
-  -  AWS Global Accelerator
+  - AWS Global Accelerator
   - Improve global application availability and performance using the AWS global network
-  -  AWS Outposts
+  - AWS Outposts
   - Deploy Outposts Racks in your own Data Centers to extend AWS services
-  -  AWS WaveLenth
+  - AWS WaveLenth
   - Brings AWS services to the edge of the 5G networks
   - Ultra-low latency applications
-  -  AWS Local Zones
+  - AWS Local Zones
   - Brings AWS resources (compute, database, storage, …) closer to your users
   - Good for latency-sensitive applications
 
