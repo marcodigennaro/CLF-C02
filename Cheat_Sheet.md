@@ -25,7 +25,9 @@ AWS Cloud Practitioner Certification Cheat Sheet
 - Users mapped to a physical user, has a password for AWS Console
 - Groups Contains Users only
 - **Policies** = JSON document that outlines permissions for users or groups
+  - Best practices:   
 - **Roles** = For EC2 instants or AWS services
+  - Best practices: 
 - Security MFA + Password Policy
 - **AWS CLI** Manage your AWS services using the Command Line Interface
 - **AWS SDK** Manage your AWS services using a programming language Software Development Kit
@@ -47,7 +49,7 @@ AWS Cloud Practitioner Certification Cheat Sheet
   - Dedicated Instance
 
 ## EC2 Instance Storage
-- EBS Volumes
+- **EBS Volumes**
   - Network drives attached to one EC2 instance at a time
   - Mapped to an Availability Zones
   - Can use EBS Snapshots for backups/transferring EBS volumes across AZ
@@ -62,27 +64,29 @@ AWS Cloud Practitioner Certification Cheat Sheet
 - FSx for Lustre — High-Performance Computing Linux file system
 
 ## ELB & ASG
- High Availability vs Scalability (vertical and horizontal) vs Elasticity vs Agility in the Cloud
- Elastic Load Balancers (ELB):
-Distribute traffic across backend EC2 instances, can be Multi-AZ ○ Supports health checks
-4 types: Classic (old), Application (HTTP-L7), Network (TCP-L4), Gateway (L3)
- Auto Scaling Groups (ASG)
-Implement Elasticity for your application, across multiple AZ
-Scale EC2 instances based on the demand on your system, and replace unhealthy
-Integrated with the ELB
+- High Availability vs Scalability (vertical and horizontal) vs Elasticity vs Agility in the Cloud
+- Elastic Load Balancers (ELB):
+  - Distribute traffic across backend EC2 instances, can be Multi-AZ
+  - Supports health checks
+  - 4 types: Classic (old), Application (HTTP-L7), Network (TCP-L4), Gateway (L3)
+- Auto Scaling Groups (ASG):
+  - Implement Elasticity for your application, across multiple AZ
+  - Scale EC2 instances based on the demand on your system, and replace unhealthy
+  - Integrated with the ELB
 
 ## Amazon S3
-Buckets vs Objects — global unique name, tied to a region
-S3 Security — IAM policy, S3 Bucket Policy (public access), S3 Encryption
-S3 Websites — Host a static website on Amazon S3
-S3 Versioning — Multiple versions for files, prevent accidental deletes
-S3 Replication — Same-region or cross-region, must enable versioning
-S3 Storage Classes — Standard, IA, 1Z-IA, Intelligent, Glacier (Instant, Flexible, Deep)
- Snow Family — Import data onto S3 through a physical device, edge computing
-SnowCone & SnowCone SSD — Storage capacity → 8TB HDD, 14TB SSD, Storage capacity → 8TB size up to 24TB, online and offline
-Snowball Edge & Storage Optimized — Storage capacity → 80TB usable, Storage capacity → up to Petabytes, offline
-SnowMobile — Storage capacity → < 100PB, Storage capacity → up to Exabytes, offline
-OpsHub — Desktop application to manage Snow Family devices Storage Gateway — Hybrid solution to extend on-premises storage to S3 
+  - Buckets vs Objects — global unique name, tied to a region
+  - S3 Security — IAM policy, S3 Bucket Policy (public access), S3 Encryption
+  - S3 Websites — Host a static website on Amazon S3
+  - S3 Versioning — Multiple versions for files, prevent accidental deletes
+  - S3 Replication — Same-region or cross-region, must enable versioning
+  - S3 Storage Classes — Standard, IA, 1Z-IA, Intelligent, Glacier (Instant, Flexible, Deep)
+  - Snow Family — Import data onto S3 through a physical device, edge computing
+    - SnowCone & SnowCone SSD — Storage capacity → 8TB HDD, 14TB SSD, Storage capacity → 8TB size up to 24TB, online and offline
+    - Snowball Edge & Storage Optimized — Storage capacity → 80TB usable, Storage capacity → up to Petabytes, offline
+    - SnowMobile — Storage capacity → < 100PB, Storage capacity → up to Exabytes, offline
+  - OpsHub — Desktop application to manage Snow Family devices
+  - Storage Gateway — Hybrid solution to extend on-premises storage to S3 
 
 ## Databases & Analytics
 Database vs Engine
