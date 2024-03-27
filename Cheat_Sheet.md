@@ -110,6 +110,9 @@ AWS Cloud Practitioner Certification Cheat Sheet
 | metadata ||
 
 ## Amazon S3
+  - Simple Storage System
+  - Can not be attached to EC2 instance
+  - accessed by REST API
   - Buckets vs Objects — global unique name, tied to a region
   - S3 Security — IAM policy, S3 Bucket Policy (public access), S3 Encryption
   - S3 Websites — Host a static website on Amazon S3
@@ -128,23 +131,24 @@ AWS Cloud Practitioner Certification Cheat Sheet
 ## Databases & Analytics
 - Database vs Engine
 - Non Relational Databases: Need for speed = key + value
-- DynamoDB (serverless)
-- DAX (cache for DynamoDB)
+  - DynamoDB (serverless)
+  - DAX (cache for DynamoDB)
 - RDS = Relational Database Service 
-- RDS: SQL, No OS access 
-- Aurora: SQL, cloud native engine, built-in security, continuous backup, serverless compute
-- DMS: Database Migration Service
+  - RDS: SQL, No OS access 
+  - Aurora: SQL, cloud native engine, built-in security, continuous backup, serverless compute
+  - DMS: Database Migration Service
+  - Redshift (SQL) - Warehouse-OLAP
 - Multi-AZ, Read Replicas, Multi-Region In-memory Database
 - Neptune: graphs 
 - QuckSight — Dashboard on your data (serverless)
 - ElasticCache
-- Warehouse-OLAP — Redshift (SQL)
-- Hadoop Cluster — EMR
+
 - Athena — Query data on Amazon S3 (serverless & SQL)
 - DocumentDB — “Aurora for MongoDB” (JSON- NoSQL database)
 - Amazon QLDB — Financial Transactions Ledger (immutable journal, cryptographically verifiable)
 - Amazon Managed Blockchain — managed Hyperledger Fabric & Ethereum blockchains
-
+- Glue - Extract Transform Load
+- EMR - Hadoop Cluster
 
 ## Other Compute
 Docker — Container technology to run applications
