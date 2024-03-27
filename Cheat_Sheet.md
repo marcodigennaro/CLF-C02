@@ -35,26 +35,31 @@ AWS Cloud Practitioner Certification Cheat Sheet
 ## EC2 (Elastic Compute Cloud)
 - EC2 Instance
   - AMI(OS) + Instance Size (CPU + RAM) + Storage + Security Group + EC2 User Data
-Security Groups — Firewall attached to the EC2 instance
-EC2 User Data — Script launched at the first start of an instance
-SSH — Start terminal into our EC2 Instances (port 22)
-EC2 Instance Role — Link to IAM roles
-Purchasing Options — On-demand, Spot, Reserved (Standard + Convertible), Dedicated Host, Dedicated Instance
+- Security Groups — Firewall attached to the EC2 instance
+- EC2 User Data — Script launched at the first start of an instance
+- SSH — Start terminal into our EC2 Instances (port 22)
+- EC2 Instance Role — Link to IAM roles
+- Purchasing Options
+  - On-demand,
+  - Spot,
+  - Reserved (Standard + Convertible),
+  - Dedicated Host,
+  - Dedicated Instance
 
 ## EC2 Instance Storage
- EBS Volumes
-Network drives attached to one EC2 instance at a time
-Mapped to an Availability Zones
-Can use EBS Snapshots for backups/transferring EBS volumes across AZ
-AMI — Create ready-to-use EC2 instance with our customisations
-EC2 Image Builder — Automatically build, test, and distribute AMIs
-EC2 Instance Store
-High-performance hardware disk attached to our EC2 instance
-Lost if our instance is stopped/terminated
-EFS — Network file system, can be attached to 100s of instances in a region
-EFS-IA — Cost-optimized storage class of infrequent access file
-FSx for Windows — Network File System for Windows servers
-FSx for Lustre — High-Performance Computing Linux file system
+- EBS Volumes
+  - Network drives attached to one EC2 instance at a time
+  - Mapped to an Availability Zones
+  - Can use EBS Snapshots for backups/transferring EBS volumes across AZ
+- **AMI** — Create ready-to-use EC2 instance with our customisations
+- **EC2 Image Builder** — Automatically build, test, and distribute AMIs
+- **EC2 Instance Store**
+  - High-performance hardware disk attached to our EC2 instance
+  - Lost if our instance is stopped/terminated
+- **EFS** — Network file system, can be attached to 100s of instances in a region
+- **EFS-IA** — Cost-optimized storage class of Infrequent Access file
+- FSx for Windows — Network File System for Windows servers
+- FSx for Lustre — High-Performance Computing Linux file system
 
 ## ELB & ASG
  High Availability vs Scalability (vertical and horizontal) vs Elasticity vs Agility in the Cloud
