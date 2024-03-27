@@ -20,6 +20,14 @@ AWS Cloud Practitioner Certification Cheat Sheet
 - Edge Locations
 - AWS Regional Services List
 
+## Well Architected Framework - 6 pillars
+- Operational Excellence
+- Security
+- Reliability
+- Performance
+- Cost Optimization
+- Sustainability
+  
 ## IAM (Identity and Access Management)
 - Authorization vs Authentication
 - Users mapped to a physical user, has a password for AWS Console
@@ -36,17 +44,20 @@ AWS Cloud Practitioner Certification Cheat Sheet
 
 ## EC2 (Elastic Compute Cloud)
 - EC2 Instance
+  - Boot strapping: lauch command when computer starts , aka automate boot tasks
   - AMI(OS) + Instance Size (CPU + RAM) + Storage + Security Group + EC2 User Data
 - Security Groups — Firewall attached to the EC2 instance
 - EC2 User Data — Script launched at the first start of an instance
 - SSH — Start terminal into our EC2 Instances (port 22)
 - EC2 Instance Role — Link to IAM roles
-- Purchasing Options
-  - On-demand,
-  - Spot,
-  - Reserved (Standard + Convertible),
-  - Dedicated Host,
+- Purchasing Options:
+  - On-demand
+  - Reserved (Standard + Convertible)
+  - Serving Plans
+  - Spot Instances
+  - Dedicated Host
   - Dedicated Instance
+  - Capacity Reservation
 
 ## EC2 Instance Storage
 - **EBS Volumes**
@@ -70,6 +81,8 @@ AWS Cloud Practitioner Certification Cheat Sheet
   - Supports health checks
   - 4 types: Classic (old), Application (HTTP-L7), Network (TCP-L4), Gateway (L3)
 - Auto Scaling Groups (ASG):
+  - Most effective way of ensuring that a website is highly available
+    - Define: minumum size, actual/desired size and maximum size  
   - Implement Elasticity for your application, across multiple AZ
   - Scale EC2 instances based on the demand on your system, and replace unhealthy
   - Integrated with the ELB
@@ -89,24 +102,24 @@ AWS Cloud Practitioner Certification Cheat Sheet
   - Storage Gateway — Hybrid solution to extend on-premises storage to S3 
 
 ## Databases & Analytics
-Database vs Engine
-Non Relational Databases: Need for speed = key + value
-DynamoDB (serverless)
-DAX (cache for DynamoDB)
-RDS = Relational Database Service 
-RDS: SQL, No OS access 
-Aurora: SQL, cloud native engine, built-in security, continuous backup, serverless compute
-DMS: Database Migration Service
-Multi-AZ, Read Replicas, Multi-Region In-memory Database
-Neptune: graphs 
-QuckSight — Dashboard on your data (serverless)
-ElasticCache
-Warehouse-OLAP — Redshift (SQL)
-Hadoop Cluster — EMR
-Athena — Query data on Amazon S3 (serverless & SQL)
-DocumentDB — “Aurora for MongoDB” (JSON- NoSQL database)
-Amazon QLDB — Financial Transactions Ledger (immutable journal, cryptographically verifiable)
-Amazon Managed Blockchain — managed Hyperledger Fabric & Ethereum blockchains
+- Database vs Engine
+- Non Relational Databases: Need for speed = key + value
+- DynamoDB (serverless)
+- DAX (cache for DynamoDB)
+- RDS = Relational Database Service 
+- RDS: SQL, No OS access 
+- Aurora: SQL, cloud native engine, built-in security, continuous backup, serverless compute
+- DMS: Database Migration Service
+- Multi-AZ, Read Replicas, Multi-Region In-memory Database
+- Neptune: graphs 
+- QuckSight — Dashboard on your data (serverless)
+- ElasticCache
+- Warehouse-OLAP — Redshift (SQL)
+- Hadoop Cluster — EMR
+- Athena — Query data on Amazon S3 (serverless & SQL)
+- DocumentDB — “Aurora for MongoDB” (JSON- NoSQL database)
+- Amazon QLDB — Financial Transactions Ledger (immutable journal, cryptographically verifiable)
+- Amazon Managed Blockchain — managed Hyperledger Fabric & Ethereum blockchains
 
 
 ## Other Compute
