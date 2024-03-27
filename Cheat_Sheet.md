@@ -7,7 +7,7 @@ Notes for the CLF-C02 exam
 - 4 Benefits of CC: Agility, Elasticity, Cost Savings, Deploy globally in minutes 
 - 3 types of CC IaaS, PaaS, SaaS
 
-# 6 Categories and colors
+### 6 Categories and colors
 - Orange: Compute
 - Purple: Network
 - Pink: Governance and Monitoring
@@ -15,19 +15,19 @@ Notes for the CLF-C02 exam
 - Red: Security
 - Green: Storage
 
-# Pricing 
+### Pricing 
 - Compute: by CPU time
 - Storage: by MB stored
 - Network: only data leaving the cloud
 
-## Regions
+### Regions
 - Clusters of data centers
 - Compliance, Proximity, Latency
 - Available services
 - Edge Locations
 - AWS Regional Services List
 
-## Well Architected Framework - 6 pillars
+### Well Architected Framework - 6 pillars
 - Operational Excellence
 - Security
 - Reliability
@@ -35,7 +35,7 @@ Notes for the CLF-C02 exam
 - Cost Optimization
 - Sustainability
   
-## IAM (Identity and Access Management)
+# IAM (Identity and Access Management)
 - Authorization vs Authentication
 - Users mapped to a physical user, has a password for AWS Console
 - Groups Contains Users only
@@ -49,7 +49,7 @@ Notes for the CLF-C02 exam
 - Access Keys Access AWS using the CLI or SDK
 - Audit IAM Credential Reports & IAM Access Advisor
 
-## EC2 (Elastic Compute Cloud)
+# EC2 (Elastic Compute Cloud)
 - EC2 Instance
   - Boot strapping: lauch command when computer starts , aka automate boot tasks
   - AMI(OS) + Instance Size (CPU + RAM) + Storage + Security Group + EC2 User Data
@@ -65,6 +65,37 @@ Notes for the CLF-C02 exam
   - Dedicated Host
   - Dedicated Instance
   - Capacity Reservation
+
+# Storage
+  - **S3** Simple Storage Service. Objects have key, data, metadata.
+  - **EFS** Elastic File System. No root storage, mounted to store data
+    - **EFS IA** Infrequent Access
+  - **EBS** Elastic Block Store = Block based storage for EC2
+  - **AMI** Amazon Machine Image
+  - **EC2** Instance Store -> short term storage
+  - Access: standard, infrequent, archivial ( = glacier )
+
+| Object | Block | File |
+|--------|-------|------|
+| S3     | EBS   | EFS, FxS |
+
+### Amazon S3
+  - Can not be attached to EC2 instance
+  - accessed by REST API
+  - Buckets vs Objects — global unique name, tied to a region
+  - S3 Security — IAM policy, S3 Bucket Policy (public access), S3 Encryption
+  - S3 Websites — Host a static website on Amazon S3
+  - S3 Versioning — Multiple versions for files, prevent accidental deletes
+  - S3 Replication — Same-region or cross-region, must enable versioning
+  - S3 Storage Classes — Standard, IA, 1Z-IA, Intelligent, Glacier (Instant, Flexible, Deep)
+  - Snow Family
+    — Import data onto S3 through a physical device, edge computing
+    - Compute optimized vs Storage optimized
+    - SnowCone & SnowCone SSD — Storage capacity → 8TB HDD, 14TB SSD, Storage capacity → 8TB size up to 24TB, online and offline
+    - Snowball Edge & Storage Optimized — Storage capacity → 80TB usable, Storage capacity → up to Petabytes, offline
+    - SnowMobile — Storage capacity → < 100PB, Storage capacity → up to Exabytes, offline
+  - OpsHub — Desktop application to manage Snow Family devices
+  - Storage Gateway — Hybrid solution to extend on-premises storage to S3 
 
 ## EC2 Instance Storage
 - **EBS** = Elastic Block Store
@@ -94,39 +125,9 @@ Notes for the CLF-C02 exam
   - Scale EC2 instances based on the demand on your system, and replace unhealthy
   - Integrated with the ELB
 
-## Storage
-  - **S3** Simple Storage Service. Objects have key, data, metadata.
-  - **EFS** Elastic File System. No root storage, mounted to store data
-    - **EFS IA** Infrequent Access
-  - **EBS** Elastic Block Store = Block based storage for EC2
-  - **AMI** Amazon Machine Image
-  - **EC2** Instance Store -> short term storage
-  - Access: standard, infrequent, archivial ( = glacier )
 
-| Object | Block | File |
-|--------|-------|------|
-| S3     | EBS   | EFS, FxS |
 
-## Amazon S3
-  - Simple Storage System
-  - Can not be attached to EC2 instance
-  - accessed by REST API
-  - Buckets vs Objects — global unique name, tied to a region
-  - S3 Security — IAM policy, S3 Bucket Policy (public access), S3 Encryption
-  - S3 Websites — Host a static website on Amazon S3
-  - S3 Versioning — Multiple versions for files, prevent accidental deletes
-  - S3 Replication — Same-region or cross-region, must enable versioning
-  - S3 Storage Classes — Standard, IA, 1Z-IA, Intelligent, Glacier (Instant, Flexible, Deep)
-  - Snow Family
-    — Import data onto S3 through a physical device, edge computing
-    - Compute optimized vs Storage optimized
-    - SnowCone & SnowCone SSD — Storage capacity → 8TB HDD, 14TB SSD, Storage capacity → 8TB size up to 24TB, online and offline
-    - Snowball Edge & Storage Optimized — Storage capacity → 80TB usable, Storage capacity → up to Petabytes, offline
-    - SnowMobile — Storage capacity → < 100PB, Storage capacity → up to Exabytes, offline
-  - OpsHub — Desktop application to manage Snow Family devices
-  - Storage Gateway — Hybrid solution to extend on-premises storage to S3 
-
-## Databases & Analytics
+# Databases & Analytics
 - Database vs Engine
 - Non Relational Databases: Need for speed = key + value
   - **DynamoDB (serverless)
@@ -153,7 +154,14 @@ Notes for the CLF-C02 exam
 - **Time Stream**
 - **Quick Sight**
 
-## Other Compute
+# Serverless Compute: FaaS
+- **Lamba** — Serverless, FaaS, seamless scaling, reactive 
+  - **Lambda Billings**
+    - By the time run x by the RAM Provisioned
+    - By the number of invocations
+  - Language Support — Many programming languages except (arbitrary) Docker
+  - Invocation time — up to 15 minutes
+- **Other Computes**
   - **ECS** Elastic Container Service — Run docker containers on EC2 instance
   - **Fargate**
     - Run Docker containers without provisioning the infrastructure
@@ -161,14 +169,6 @@ Notes for the CLF-C02 exam
   - **ECR** Elastic Container Registr) — Private Docker Image Repository
   - **Batch** — Run batch jobs on AWS across managed EC2 instance
   - **Lightsail** — Predictable & low pricing for simple applications & DB
-
-## Lambda
-**Lamba** — Serverless, FaaS, seamless scaling, reactive 
-  - **Lambda Billings**
-    - By the time run x by the RAM Provisioned
-    - By the number of invocations
-  - Language Support — Many programming languages except (arbitrary) Docker
-  - Invocation time — up to 15 minutes
 
 ## Deployment
   - CloudFormation (AWS only)
