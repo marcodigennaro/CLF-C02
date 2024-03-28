@@ -229,7 +229,7 @@ Decouple synchronous applications
 - **Kinesis** — Real-time data streaming, persistence, and analysis (video)
 - **Amazon MQ** — Managed message broker for ActiveMQ and RabbitMQ in the cloud (MQTT, AMQP… protocols)
 
-## Cloud Monitoring
+### Cloud Monitoring
   - **CloudWatch** - Observe and monitor resources and applications on AWS, on premises, and on other clouds
   - **CloudWatch Log**:
     - Metrics — Monitor the performance of AWS services and billing metrics: CPU utilisation, Network
@@ -250,22 +250,36 @@ Decouple synchronous applications
     - Detect, track, and fix code security vulnerabilities anywhere in the development cycle using ML and automated reasoning
 
   
-## AWS Security & Compliance
-  - Artifact — Get access to compliance reports such as PCI, ISO, etc …
-  - Share Responsibility on AWS
-  - Sheild — Automatic DDoS Protection + 24/7 support for advanced
-  - WAF — Firewall to filter incoming requests based on rules
-  - KMS — Encryption keys managed by AWS
-  - CloudHSM — Hardware encryption, we manage encryption keys
-  - AWS Certificate Manager — Provision, manage, and deploy SSL/TLS certificates
-  - GuardDuty — Find malicious behavior with VPC, DNS & CloudTrail Logs
-  - Inspector — Find software vulnerabilities in EC2, ECR images, and Lambda functions
-  - Network Firewall — Protect VPC against network attacks
-  - Config — Track config changes and compliance against rules
-  - Macie — Find sensitive data (e.g. PII data) in Amazon S3 buckets
-  - Amazon Detective — Find the root cause of security issues or suspicious activities
-  - AWS Abuse — Report AWS resources used for abusive or illegal purposes
-  - Root user privileges
+### Security & Compliance
+Shared Responsibility on AWS
+DDoS = Distributed Denial of Service
+7 layers **OSI** model (Open System Intercom):
+  1. physical
+  2. data
+  3. network
+  4. transport
+  5. session
+  6. presentation
+  7. application
+
+- **Sheild**
+  — Standard: Automatic DDoS Protection
+  - Advanced: 24/7 support (?)
+- **WAF** — Web Application Firewall to filter incoming requests based on rules
+  - Availability, Security, Eccessive Resources
+- **KMS** Key Management System — Encryption keys managed by AWS
+- **HSM** Hardware Security Models
+- **ACM** AWS Certificate Manager: Provision and manage SSL/TLS certificates with AWS services and connected resources. In flight encryption
+- **AWS Secrets Manager**: Rotation, Automation, Centrally manages the lifecycle of secrets
+- **AWS Artifact** — Access AWS and ISV security and compliance reports.
+- **GuardDuty** — Find malicious behavior with VPC, DNS & CloudTrail Logs
+  - Logs (VPC, CloudTrail, DNS, Lambda, RDB, ...) -> GD -> EventBridge -> [SNS, Lambda, ...] 
+- **Amazon Inspector** — Find software vulnerabilities in EC2, ECR images, and Lambda functions
+- **Amazon Detective** — Find the root cause of security issues or suspicious activities
+- **AWS Config** — Assess, audit, and evaluate configurations of your resources. Track config changes and compliance against rules
+- **Macie** — Find sensitive data (e.g. PII data) in Amazon S3 buckets
+
+- Root user privileges
   - Change account setting
   - Close your AWS account
   - Change or cancel your AWS Support plan
