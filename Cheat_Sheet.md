@@ -37,39 +37,9 @@
   
 ### IAM (Identity and Access Management)
 
-<table>
-<thead>
-<tr>
-<th>IAM Identity</th>
-<th>Belongs To</th>
-<th>Description</th>
-<th>Key Characteristics</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td rowspan="4">User, Group, Role</td>
-<td>User</td>
-<td>Represents an individual person or service that interacts with AWS</td>
-<td>- Has permanent long-term credentials<br>- Can be a member of multiple groups<br>- Directly assigned policies</td>
-</tr>
-<tr>
-<td>Group</td>
-<td>A collection of users under a set of permissions</td>
-<td>- Cannot be nested (no groups within groups)<br>- Simplifies permission management<br>- Does not have credentials</td>
-</tr>
-<tr>
-<td>Role</td>
-<td>A set of permissions that define what actions are allowed and denied by an entity in AWS</td>
-<td>- Assumed temporarily<br>- Used for granting permissions across AWS accounts or to AWS services<br>- No long-term credentials</td>
-</tr>
-<tr>
-<td>Policy</td>
-<td>Documents that define permissions and can be attached to users, groups, or roles</td>
-<td>- JSON document detailing permissions<br>- Can be managed (AWS predefined) or inline (user-defined)<br>- Specifies what actions are allowed or denied</td>
-</tr>
-</tbody>
-</table>
+| IAM Identity | Belongs To | Description                                                      | Key Characteristics                                          |
+|--------------|------------|------------------------------------------------------------------|--------------------------------------------------------------|
+| User         | N/A        | Represents an individual person or service that interacts with AWS | 1. Has permanent long-term credentials <br>2. Can be a member of multiple groups <br>3. Directly assigned policies |
 
 | Identity	| Belongs To	| Description	| Key Characteristics| 
 | ----------| ----------- | ----------- | -------------------|  
