@@ -36,18 +36,42 @@
 - Sustainability
   
 ### IAM (Identity and Access Management)
+
+
+| Identity	| Belongs To	| Description	| Key Characteristics| 
+| ----------| ----------- | ----------- | -------------------|  
+| User	| N/A	| An individual person | 	Permanent long-term credentials |  - Can be a member of multiple groups |
+| 	| 	| | 	 |  - Directly assigned policies |
+
+Group	Users	A collection of users under a set of permissions	- Cannot be nested (no groups within groups)<br>- Simplifies permission management<br>- Does not have credentials
+Role	AWS services, Users, Applications	A set of permissions that define what actions are allowed and denied by an entity in AWS	- Assumed temporarily<br>- Used for granting permissions across AWS accounts or to AWS services<br>- No long-term credentials
+Policy	Users, Groups, Roles	Documents that define permissions and can be attached to users, groups, or roles	- JSON document detailing permissions<br>- Can be managed (AWS predefined) or inline (user-defined)<br>- Specifies what actions are allowed or denied
+
 - Authorization vs Authentication
 - Users mapped to a physical user, has a password for AWS Console
 - Groups Contains Users only
-- **Policies** = JSON document that outlines permissions for users or groups
+- **User** 
+- **Policy**: JSON document that outlines permissions for users or groups
   - Best practices:   
-- **Roles** = For EC2 instants or AWS services
+- **Role**
+  - a Role is a IAM identity with specific permissions
+  - Similar to a User, but not uniquely associated to a person
+  - Does not havee standard long-term credentials
+  - For EC2 instants or AWS services
   - Best practices: 
 - Security MFA + Password Policy
 - **AWS CLI** Manage your AWS services using the Command Line Interface
 - **AWS SDK** Manage your AWS services using a programming language Software Development Kit
 - Access Keys Access AWS using the CLI or SDK
 - Audit IAM Credential Reports & IAM Access Advisor
+- **IAM** Identity and Access Management
+- For users that you trust and belong to your company
+Organizations — Manage multiple accounts
+  - Security Token Service (STS) — temporary, limited-privileges credentials to access AWS resources
+  - Cognito — Create a database of users for your mobile & web applications
+  - Directory Services — Integrate Microsoft Active Directory in AWS
+  - IAM Identify Center — One login for multiple AWS accounts & applications
+
 
 ### EC2 (Elastic Compute Cloud)
 - EC2 Instance
@@ -288,7 +312,7 @@ DDoS = Distributed Denial of Service
 - **Security Hub** - Automate AWS security checks and centralize security alerts
 
 
-## AWS Machine Learning
+### AWS Machine Learning
   - Rekognition — Face detection, labeling, celebrity recognition
   - Transcribe — Audio to Text (e.g. subtitles)
   - Polly — Text to Audio
@@ -302,7 +326,7 @@ DDoS = Distributed Denial of Service
   - Personalize — Real-time personalized recommendations
   - Textact — Detect text and data in documents
 
-## AWS VPC & Network
+### AWS VPC & Network
   - VPC — Virtual Private Cloud
   - Subnets — Tied to an AZ, network partition of the VPC
   - Internet Gateway — At the VPC level, provide Internet Access
@@ -319,7 +343,7 @@ DDoS = Distributed Denial of Service
   - Direct Connect — Direct private connection to AWS
   - Transit Gateway — Connect thousands of VPC and on-premises networks together
 
-## Account Best Practices
+### Account Best Practices
   - Operate multiple accounts using Organizations
   - Use SCP (service control policies) to restrict account power
   - Easily setup multiple accounts with best-practices with AWS Control Tower
@@ -331,7 +355,7 @@ DDoS = Distributed Denial of Service
   - If your Account is compromised — change the root password, delete and rotate all passwords/keys, contact the AWS support
   - Allow users to create pre-defined stacks defined by admins using AWS Service Catalog
 
-## Billing and Costing Tools
+### Billing and Costing Tools
   - Compute Optimizer — Recommends resources’ configuration to reduce cost
   - Pricing Calculator — Cost of services on AWS
   - Billing Dashboard — High-level overview + free tier dashboard
@@ -344,25 +368,14 @@ DDoS = Distributed Denial of Service
   - Cost Anomaly Detection — Detect unusual spends using Machine Learning
   - Service Quotas — Notify you when you’re close to the service quota threshold
 
-## Advanced Identity
-- **IAM** Identity and Access Management inside your AWS account
-- For users that you trust and belong to your company
-Organizations — Manage multiple accounts
-  - Security Token Service (STS) — temporary, limited-privileges credentials to access AWS resources
-  - Cognito — Create a database of users for your mobile & web applications
-  - Directory Services — Integrate Microsoft Active Directory in AWS
-  - IAM Identify Center — One login for multiple AWS accounts & applications
-
-## AWS Support Plan
+### AWS Support Plan
 There are four AWS support plans available:
 - Basic — billing and account support only (access to forums only).
 - Developer — business hours support via email.
 - Business — 24×7 email, chat, and phone support.
 - Enterprise — 24×7 email, chat, and phone support.
 
-
-
-## AWS Well-Architected and the Six Pillars
+### AWS Well-Architected and the Six Pillars
 The AWS Well-Architected Framework describes key concepts, design principles, and architectural best practices for designing and running workloads in the cloud.
 By answering a few foundational questions, learn how well your architecture aligns with cloud best practices and gain guidance for making improvements.
 
@@ -373,7 +386,7 @@ By answering a few foundational questions, learn how well your architecture alig
 - Cost Optimisation Pillar — The cost optimisation pillar focuses on avoiding unnecessary costs. Key topics include understanding spending over time and controlling fund allocation, selecting resources of the right type and quantity, and scaling to meet business needs without overspending.
 - Sustainability Pillar — The sustainability pillar focuses on minimizing the environmental impacts of running cloud workloads. Key topics include a shared responsibility model for sustainability, understanding impact, and maximizing utilization to minimize required resources and reduce downstream impacts.
 
-## AWS Cloud Adoption Framework (AWS CAF)
+### AWS Cloud Adoption Framework (AWS CAF)
 
 Other Services
  Amazon WorkSpace
@@ -405,7 +418,7 @@ Move large amounts of data from on-premises to AWS
 Replication tasks can be scheduled hourly, daily, weekly
 The replication tasks are incremental after the first full load
 
-## AWS Application Discovery Service
+### AWS Application Discovery Service
 - Plan migration projects by gathering information about on-premises data centers
 - Server utilization data and dependency mapping are important for migrations 
 - Agentless Discovery (AWS Agentless Discovery Connector) → VM inventory, configuration, and performance history such as CPU, memory, and disk usage 
@@ -419,7 +432,7 @@ The replication tasks are incremental after the first full load
 - AWS Migration Hub Orchestrator — provides pre-built templates to save time and effort migrating enterprise apps (e.g., SAP, Microsoft SQL Server…)
 - Supports migrations status updates from Application Migration Service
 
-## (MGN) and Database Migration Service (DMS)  AWS Fault Injection Simulator (FIS)
+### (MGN) and Database Migration Service (DMS)  AWS Fault Injection Simulator (FIS)
 - A fully managed service for running fault injection experiments on AWS workloads
 - Based on Chaos Engineering — stressing an application by creating disruptive events (e.g., a sudden increase in CPU or memory), observing how the system responds, and implementing improvements
 AWS Step Functions
