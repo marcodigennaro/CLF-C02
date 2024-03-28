@@ -41,7 +41,8 @@
 | Identity	| Belongs To	| Description	| Key Characteristics| 
 | ----------| ----------- | ----------- | -------------------|  
 | User	| N/A	| An individual person | 	Permanent long-term credentials |  - Can be a member of multiple groups |
-| 	| 	| | 	 |  - Directly assigned policies |
+| 	    | 	  |                      |                                	 |  - Directly assigned policies |
+| ----------| ----------- | ----------- | -------------------|  
 
 Group	Users	A collection of users under a set of permissions	- Cannot be nested (no groups within groups)<br>- Simplifies permission management<br>- Does not have credentials
 Role	AWS services, Users, Applications	A set of permissions that define what actions are allowed and denied by an entity in AWS	- Assumed temporarily<br>- Used for granting permissions across AWS accounts or to AWS services<br>- No long-term credentials
