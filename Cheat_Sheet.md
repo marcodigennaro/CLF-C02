@@ -251,26 +251,32 @@ Decouple synchronous applications
 - **Amazon MQ** — Managed message broker for ActiveMQ and RabbitMQ in the cloud (MQTT, AMQP… protocols)
 
 ### Cloud Monitoring
-  - **CloudWatch** - Observe and monitor resources and applications on AWS, on premises, and on other clouds
-  - **CloudWatch Log**:
-    - Metrics — Monitor the performance of AWS services and billing metrics: CPU utilisation, Network
-    - Alarms — Automate notification, perform EC2 action, notify to SNS based on metrics
-    - Logs — Collect log files from EC2 instances, servers, Lambda functions...
-    - Events (or **EventBridge**) — React to events in AWS, or trigger a rule on a schedule
-  - **CloudTrail** — Track user activity and API usage on AWS and in hybrid and multicloud environments
-  - **CloudTrail Insights** — Automated analysis of your CloudTrail Events
-  - **AWS X-Ray**
-    - Analyze and debug production and distributed applications
-    - Trouble shooting peformance
-    - Understand dependencies
-    - review
-    - identify impacted users
-  - AWS Health Dashboard — Status of all AWS services across all regions
-  - AWS Account Health Dashboard — AWS events that impact your infrastructure
-  - **Amazon CodeGuru Security**
-    - Detect, track, and fix code security vulnerabilities anywhere in the development cycle using ML and automated reasoning
+- **CloudWatch** - Observe and monitor resources and applications on AWS, on premises, and on other clouds
+- **CloudWatch Log**:
+  - Metrics — Monitor the performance of AWS services and billing metrics: CPU utilisation, Network
+  - Alarms — Automate notification, perform EC2 action, notify to SNS based on metrics
+  - Logs — Collect log files from EC2 instances, servers, Lambda functions...
+  - Events (or **EventBridge**) — React to events in AWS, or trigger a rule on a schedule
+- **CloudTrail** — Track user activity and API usage on AWS and in hybrid and multicloud environments
+- **CloudTrail Insights** — Automated analysis of your CloudTrail Events
+- **AWS X-Ray**
+  - Analyze and debug production and distributed applications
+  - Trouble shooting peformance
+  - Understand dependencies
+  - review
+  - identify impacted users
+- AWS Health Dashboard — Status of all AWS services across all regions
+- AWS Account Health Dashboard — AWS events that impact your infrastructure
+- **Amazon CodeGuru Security**
+  - Detect, track, and fix code security vulnerabilities anywhere in the development cycle using ML and automated reasoning
+- **Trusted Advisor** to get insights, Support Plan adapted to your needs
+  - Identify under utilised EC2 instances to reduce costs
+    - Cost option
+    - Security
+    - Fault tolerance
+    - Performance
+    - Service limits
 
-  
 ### Security & Compliance
 Shared Responsibility on AWS
 DDoS = Distributed Denial of Service
