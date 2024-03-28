@@ -3,7 +3,7 @@
 
 ### Intro
 - 3 Deployment Methods: Private, Public, Hybrid
-- 3 types of CC: Infrastructure-as-a-Service (IaaS), Platforms-as-a-Service (PaaS), and Software-as-a-Service (SaaS)
+- 3 types of CC: Infrastructure as a Service (IaaS), Platforms as a Service (PaaS), and Software as a Service (SaaS)
 - 5 Characteristics of CC 
 - 4 Benefits of CC: Agility, Elasticity, Cost Savings, Deploy globally in minutes 
 
@@ -22,14 +22,14 @@
 
 ### Resources
 - **Region**: separate geographic area. Has multiple, isolated locations (AZ).
-- **Availability Zone**
+- **Availability Zone**. 
 - **Local Zone**: an extension of a Region that is geographically close to your users
 - Edge Locations
 - Clusters of data centers
 - Compliance, Proximity, Latency
 - Available services
 - AWS Regional Services List
-
+  
 ### Well Architected Framework - 6 pillars
 - Operational Excellence
 - Security
@@ -450,3 +450,4 @@ Use cases: weather forecasting, surface imaging, communications, video broadcast
 Scalable 2-ways (inbound/outbound) marketing communication service
 Supports email, SMS, push, voice, and in-app messaging
 Use cases: run campaigns by sending marketing, bulk, and transactional SMS messages
+
