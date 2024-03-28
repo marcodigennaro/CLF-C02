@@ -37,19 +37,12 @@
   
 ### IAM (Identity and Access Management)
 
-| IAM Identity | Belongs To | Description                                                      | Key Characteristics                                          |
-|--------------|------------|------------------------------------------------------------------|--------------------------------------------------------------|
-| User         | N/A        | Represents an individual person or service that interacts with AWS | 1. Has permanent long-term credentials <br>2. Can be a member of multiple groups <br>3. Directly assigned policies |
-
-| Identity	| Belongs To	| Description	| Key Characteristics| 
-| ----------| ----------- | ----------- | -------------------|  
-| User	| N/A	| An individual person | 	Permanent long-term credentials |  - Can be a member of multiple groups |
-| 	    | 	  |                      |                                	 |  - Directly assigned policies |
-| ----------| ----------- | ----------- | -------------------|  
-
-Group	Users	A collection of users under a set of permissions	- Cannot be nested (no groups within groups)<br>- Simplifies permission management<br>- Does not have credentials
-Role	AWS services, Users, Applications	A set of permissions that define what actions are allowed and denied by an entity in AWS	- Assumed temporarily<br>- Used for granting permissions across AWS accounts or to AWS services<br>- No long-term credentials
-Policy	Users, Groups, Roles	Documents that define permissions and can be attached to users, groups, or roles	- JSON document detailing permissions<br>- Can be managed (AWS predefined) or inline (user-defined)<br>- Specifies what actions are allowed or denied
+| IAM Identity | Can belong to | Description                      | Key Characteristics                                          |
+|--------------|------------|----------------------------------                |--------------------------------------------------------------|
+| User         | Groups     | An individual person or service                  | 1. Permanent long-term credentials <br>2. Can be a member of multiple groups <br>3. Directly assigned policies |
+| Group	       | N/A	      | A collection of users under a set of permissions | 1. Cannot be nested (no groups within groups)<br>2. Simplifies permission management<br>3. Does not have credentials |
+| Role	       | 1. AWS services <br>2. Users<br>3. Applications	| A set of permissions |	1. Assumed temporarily<br>2. Used for granting permissions to accounts/services<br>3.No long-term credentials |
+| Policy	| 1. Users <br>2. Groups <br>3. Roles	| Documents that define permissions |	1. JSON document detailing permissions<br>2. Can be managed (AWS predefined) or inline (user-defined)<br>3. Specifies what actions are allowed or denied |
 
 - Authorization vs Authentication
 - Users mapped to a physical user, has a password for AWS Console
