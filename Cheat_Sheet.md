@@ -231,15 +231,25 @@ Decouple synchronous applications
 
 ## Cloud Monitoring
   - **CloudWatch** - Observe and monitor resources and applications on AWS, on premises, and on other clouds
-  - Metrics — Monitor the performance of AWS services and billing metrics ○ Alarms — Automate notification, perform EC2 action, notify to SNS based on metrics
-  - Logs — Collect log files from EC2 instances, servers, Lambda functions… ○ Events (or EventBridge) — React to events in AWS, or trigger a rule on a schedule
+  - **CloudWatch Log**:
+    - Metrics — Monitor the performance of AWS services and billing metrics: CPU utilisation, Network
+    - Alarms — Automate notification, perform EC2 action, notify to SNS based on metrics
+    - Logs — Collect log files from EC2 instances, servers, Lambda functions...
+    - Events (or **EventBridge**) — React to events in AWS, or trigger a rule on a schedule
   - **CloudTrail** — Track user activity and API usage on AWS and in hybrid and multicloud environments
-  - CloudTrail Insights — Automated analysis of your CloudTrail Events
-  - X-Ray — Trace requests made through your distributed applications
+  - **CloudTrail Insights** — Automated analysis of your CloudTrail Events
+  - **AWS X-Ray**
+    - Analyze and debug production and distributed applications
+    - Trouble shooting peformance
+    - Understand dependencies
+    - review
+    - identify impacted users
   - AWS Health Dashboard — Status of all AWS services across all regions
   - AWS Account Health Dashboard — AWS events that impact your infrastructure
-  - Amazon CodeGuru — Automated code reviews and application performance recommendations
+  - **Amazon CodeGuru Security**
+    - Detect, track, and fix code security vulnerabilities anywhere in the development cycle using ML and automated reasoning
 
+  
 ## AWS Security & Compliance
   - Artifact — Get access to compliance reports such as PCI, ISO, etc …
   - Share Responsibility on AWS
