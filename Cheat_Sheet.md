@@ -1,11 +1,11 @@
 # AWS Cloud Practitioner Certification Cheat Sheet
-# Notes for the CLF-C02 exam
+## Notes for the CLF-C02 exam
 
 ### Intro
-- 3 Deployment Methods Private, Public, Hybrid
+- 3 Deployment Methods: Private, Public, Hybrid
+- 3 types of CC: Infrastructure-as-a-Service (IaaS), Platforms-as-a-Service (PaaS), and Software-as-a-Service (SaaS)
 - 5 Characteristics of CC 
 - 4 Benefits of CC: Agility, Elasticity, Cost Savings, Deploy globally in minutes 
-- 3 types of CC IaaS, PaaS, SaaS
 
 ### 6 Categories and colors
 - Orange: Compute
@@ -20,11 +20,14 @@
 - Storage: by MB stored
 - Network: only data leaving the cloud
 
-### Regions
+### Resources
+- **Region**: separate geographic area. Has multiple, isolated locations (AZ).
+- **Availability Zone**
+- **Local Zone**: an extension of a Region that is geographically close to your users
+- Edge Locations
 - Clusters of data centers
 - Compliance, Proximity, Latency
 - Available services
-- Edge Locations
 - AWS Regional Services List
 
 ### Well Architected Framework - 6 pillars
