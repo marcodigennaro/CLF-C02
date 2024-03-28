@@ -196,17 +196,18 @@ Organizations — Manage multiple accounts
   - IaaC: Infrastructure as a Code
   - Need to repeat architecture in different settings: environment, region or account
   - CFT: Cloud Formation Template
-- **Beanstalk**
+- **Elastic Beanstalk**
   - PaaS: Platform as a Service
-  - Health Monitoring
-- AWS CDK (Cloud Development Kit) — Defined your cloud infrastructure using a programming language
-- CodeDeploy (Hybrid) — Deploy & upgrade any application onto servers
-- CodeCommit — private git repository/version control
-- CodeBuild — Build & Test code
-- CodePipeline — Orchestration of pipeline (from code to build to deploy)
-- CodeArtifact — Store software packages/dependencies on AWS
-- CodeStar — Unified view for allowing developers to do CI/CD and code
-- Cloud9 — Cloud IDE with collab
+  - Health Monitoring (?)
+  - an orchestration service for deploying applications which orchestrates various services, including EC2, S3, SNS, CloudWatch, autoscaling, and Elastic Load Balancers.
+- **AWS CDK** (Cloud Development Kit) — Defined your cloud infrastructure using a programming language
+- **CodeDeploy** (Hybrid) — Deploy & upgrade any application onto servers
+- **CodeCommit** — private git repository/version control
+- **CodeBuild** — Build & Test code
+- **CodePipeline** — Orchestration of pipeline (from code to build to deploy)
+- **CodeArtifact** — Store software packages/dependencies on AWS
+- **CodeStar** — Unified view for allowing developers to do CI/CD and code
+- **Cloud9** — Cloud IDE with collab
 - Systems Manager (Hybrid) — Patch, configure, and run commands at scale
 - OpsWorks (Hybrid) — Managed Chef and Puppet in AWS
 
