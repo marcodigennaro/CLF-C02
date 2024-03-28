@@ -198,7 +198,8 @@ Latency, Disaster Recovery, Attack
   - It is great to route users to the closet deployment with the least latency
   - Great for disaster recovery strategies
   - Routing Policy: simple or weighted or latency or failover
-- **CloudFront** Global Content Delivery Network (CDN): 
+- **CloudFront** Global Content Delivery Network (CDN):  
+  - Securely deliver content with low latency and high transfer speeds
   - Replicate part of your application to AWS Edge Locations — decrease latency
   - Cache common requests — improved user experience and decreased latency
 - **S3 Transfer Acceleration** Accelerate global uploads & download into Amazon S3 with private AWS network
@@ -229,10 +230,10 @@ Decouple synchronous applications
 - **Amazon MQ** — Managed message broker for ActiveMQ and RabbitMQ in the cloud (MQTT, AMQP… protocols)
 
 ## Cloud Monitoring
-  - CloudWatch
+  - **CloudWatch** - Observe and monitor resources and applications on AWS, on premises, and on other clouds
   - Metrics — Monitor the performance of AWS services and billing metrics ○ Alarms — Automate notification, perform EC2 action, notify to SNS based on metrics
   - Logs — Collect log files from EC2 instances, servers, Lambda functions… ○ Events (or EventBridge) — React to events in AWS, or trigger a rule on a schedule
-  - CloudTrail — Audit API calls made within your AWS account
+  - **CloudTrail** — Track user activity and API usage on AWS and in hybrid and multicloud environments
   - CloudTrail Insights — Automated analysis of your CloudTrail Events
   - X-Ray — Trace requests made through your distributed applications
   - AWS Health Dashboard — Status of all AWS services across all regions
@@ -252,7 +253,6 @@ Decouple synchronous applications
   - Network Firewall — Protect VPC against network attacks
   - Config — Track config changes and compliance against rules
   - Macie — Find sensitive data (e.g. PII data) in Amazon S3 buckets
-  - CloudTrail — Track API calls made by users within an account
   - Amazon Detective — Find the root cause of security issues or suspicious activities
   - AWS Abuse — Report AWS resources used for abusive or illegal purposes
   - Root user privileges
