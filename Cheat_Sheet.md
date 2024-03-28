@@ -21,6 +21,14 @@
 - Network: only data leaving the cloud
 
 ### Resources
+| Resource          | Description                                           |
+|-------------------|-------------------------------------------------------|
+| Region            | - Global location<br>- Multiple AZs                   |
+| Availability Zone | - Isolated data centers<br>- Within a region          |
+| Edge Location     | - CDN sites<br>- Cache content                        |
+| Local Zone        | - Close to users<br>- Low-latency access              |
+| Data Center       | - House computer systems<br>- Associated components   |
+| Wavelength Zone   | - Edge of 5G networks<br>- Ultra-low latency          |
 - **Region**: separate geographic area. Has multiple, isolated locations (AZ).
 - **Availability Zone**. 
 - **Local Zone**: an extension of a Region that is geographically close to your users
