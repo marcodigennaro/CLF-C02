@@ -190,17 +190,15 @@ Organizations — Manage multiple accounts
   - **Lightsail** — Predictable & low pricing for simple applications & DB
 
 ### Deployment
-- **CloudFormation**
+- **CloudFormation**: Content Delivery Network (CDN)
   - Cost
   - Productivity
   - IaaC: Infrastructure as a Code
   - Need to repeat architecture in different settings: environment, region or account
   - CFT: Cloud Formation Template
-      
 - **Beanstalk**
   - PaaS: Platform as a Service
   - Health Monitoring
-      
 - AWS CDK (Cloud Development Kit) — Defined your cloud infrastructure using a programming language
 - CodeDeploy (Hybrid) — Deploy & upgrade any application onto servers
 - CodeCommit — private git repository/version control
