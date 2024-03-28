@@ -261,6 +261,12 @@ DDoS = Distributed Denial of Service
   5. session
   6. presentation
   7. application
+     
+- Root user privileges
+  - Change account setting
+  - Close your AWS account
+  - Change or cancel your AWS Support plan
+  - Register as a seller in the Reserved Instance Marketplace
 
 - **Sheild**
   — Standard: Automatic DDoS Protection
@@ -278,12 +284,9 @@ DDoS = Distributed Denial of Service
 - **Amazon Detective** — Find the root cause of security issues or suspicious activities
 - **AWS Config** — Assess, audit, and evaluate configurations of your resources. Track config changes and compliance against rules
 - **Macie** — Find sensitive data (e.g. PII data) in Amazon S3 buckets
+- **AWS Abuse** — Report AWS resources used for abusive or illegal purposes
+- **Security Hub** - Automate AWS security checks and centralize security alerts
 
-- Root user privileges
-  - Change account setting
-  - Close your AWS account
-  - Change or cancel your AWS Support plan
-  - Register as a seller in the Reserved Instance Marketplace
 
 ## AWS Machine Learning
   - Rekognition — Face detection, labeling, celebrity recognition
