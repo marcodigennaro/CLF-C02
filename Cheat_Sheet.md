@@ -26,16 +26,17 @@
 - Compute: by CPU time
 - Storage: by MB stored
 - Network: only data leaving the cloud
+- **TCO** Total Cost of Ownership - estimates costs wrt on premises
 
 ### Resources
 | Resource          | Description                                           |
 |-------------------|-------------------------------------------------------|
-| Region            | - Global location<br>- separate geographic area <br>- Has multiple, isolated AZs                   |
-| Availability Zone | - Isolated data centers<br>- Within a region <br>- Multiple AZs protect against failure§          |
-| Edge Location     | - CDN sites<br>- Cache content                        |
-| Local Zone        | - Close to users<br>- Low-latency access              |
-| Data Center       | - House computer systems<br>- Associated components   |
-| Wavelength Zone   | - Edge of 5G networks<br>- Ultra-low latency          |
+| **Region**            | - Global location<br>- separate geographic area <br>- Has multiple, isolated AZs                   |
+| **Availability Zone** | - Isolated data centers<br>- Within a region <br>- Multiple AZs protect against failure§          |
+| **Edge Location**     | - CDN sites<br>- Cache content to reduce latency<br>- Not used to deploy infrastructures (EC2 instances, EBS storage)|
+| **Local Zone**        | - Close to users<br>- Low-latency access              |
+| **Data Center**       | - House computer systems<br>- Associated components   |
+| **Wavelength Zone**   | - Edge of 5G networks<br>- Ultra-low latency          |
 
 - **Availability Zone**. 
 - **Local Zone**: an extension of a Region that is geographically close to your users
@@ -57,11 +58,11 @@
 
 | IAM Identity | Can belong to | Description                      | Key Characteristics                                          |
 |--------------|------------|----------------------------------   |--------------------------------------------------------------|
-| User         | Groups     | An individual person or service  | - Permanent long-term credentials <br> - Can be a member of multiple groups <br> - Directly assigned policies |
-| Group	       | N/A	      | A collection of users under a set of permissions | - Cannot be nested (no groups within groups)<br> - Simplifies permission management<br> - Does not have  credentials |
-| Role	       | - AWS services <br>- Users<br>- Applications	| - A set of permissions <br>- Similar to a User, but not uniquely associated to a person <br>- a IAM identity with specific permissions <br> - For EC2 instants or AWS services | - Assumed temporarily<br>- Used for granting permissions to accounts/services<br>- No long-term credentials |
-| Policy	| - Users <br>- Groups <br>- Roles	| Documents that define permissions |	- JSON document detailing permissions<br>- Can be managed (AWS predefined) or inline (user-defined)<br>- Specifies what actions are allowed or denied |
-|Organizations | N/A	| A service for managing multiple AWS accounts  | - Centralized management<br>- Apply policies across accounts<br>- Simplifies billing and access control |
+| **User**     | Groups     | An individual person or service  | - Permanent long-term credentials <br> - Can be a member of multiple groups <br> - Directly assigned policies |
+| **Group**	   | N/A	      | A collection of users under a set of permissions | - Cannot be nested (no groups within groups)<br> - Simplifies permission management<br> - Does not have  credentials |
+| **Role**	   | - AWS services <br>- Users<br>- Applications	| - A set of permissions <br>- Similar to a User, but not uniquely associated to a person <br>- a IAM identity with specific permissions <br> - For EC2 instants or AWS services | - Assumed temporarily<br>- Used for granting permissions to accounts/services<br>- No long-term credentials |
+| **Policy**	 | - Users <br>- Groups <br>- Roles	| Documents that define permissions |	- JSON document detailing permissions<br>- Can be managed (AWS predefined) or inline (user-defined)<br>- Specifies what actions are allowed or denied |
+| **Organizations** | N/A	| A service for managing multiple AWS accounts  | - Centralized management<br>- Apply policies across accounts<br>- Simplifies billing and access control |
 
 - Authorization vs Authentication
 - Security MFA + Password Policy
@@ -98,7 +99,9 @@
   - predictive scaling  
 
 ### Storage
-- **S3** Simple Storage Service. Objects have key, data, metadata.
+- **S3** Simple Storage Service
+  - Objects have key, data, metadata.
+  - Can host static website or media hosting
 - **EFS** Elastic File System. No root storage, mounted to store data
   - **EFS IA** Infrequent Access
 - **EBS** Elastic Block Store = Block based storage for EC2
@@ -126,7 +129,9 @@
   - Snowball Edge & Storage Optimized — Storage capacity → 80TB usable, Storage capacity → up to Petabytes, offline
   - SnowMobile — Storage capacity → < 100PB, Storage capacity → up to Exabytes, offline
 - OpsHub — Desktop application to manage Snow Family devices
-- Storage Gateway — Hybrid solution to extend on-premises storage to S3 
+- **Storage Gateway**
+  — Hybrid solution to extend on-premises storage to S3
+  - connects on-premises environments with cloud storage through cached volumes, stored volumes and tape-based backup.
 
 ### EC2 Instance Storage
 - **EBS** = Elastic Block Store
@@ -318,7 +323,7 @@ DDoS = Distributed Denial of Service
 
 - **Sheild**
   — Standard: Automatic DDoS Protection
-  - Advanced: 24/7 support (?)
+  - Advanced: 24/7 support
 - **WAF** — Web Application Firewall to filter incoming requests based on rules
   - Availability, Security, Eccessive Resources
 - **KMS** Key Management System — Encryption keys managed by AWS
@@ -328,8 +333,10 @@ DDoS = Distributed Denial of Service
 - **AWS Artifact** — Access AWS and ISV security and compliance reports.
 - **GuardDuty** — Find malicious behavior with VPC, DNS & CloudTrail Logs
   - Logs (VPC, CloudTrail, DNS, Lambda, RDB, ...) -> GD -> EventBridge -> [SNS, Lambda, ...] 
-- **Amazon Inspector** — Find software vulnerabilities in EC2, ECR images, and Lambda functions
-- **Amazon Detective** — Find the root cause of security issues or suspicious activities
+- **Inspector**
+  — Find software vulnerabilities in EC2, ECR images, and Lambda functions,
+  - Improve security
+- **Detective** — Find the root cause of security issues or suspicious activities
 - **AWS Config** — Assess, audit, and evaluate configurations of your resources. Track config changes and compliance against rules
 - **Macie** — Find sensitive data (e.g. PII data) in Amazon S3 buckets
 - **AWS Abuse** — Report AWS resources used for abusive or illegal purposes
@@ -355,10 +362,13 @@ DDoS = Distributed Denial of Service
   - Subnets — Tied to an AZ, network partition of the VPC
   - Internet Gateway — At the VPC level, provide Internet Access
   - NAT Gateway / Instances — Give internet access to private subnets
-  - NACL — Stateless, subnet rules for inbound and outbound
+  - **Network ACL**
+    — Stateless, subnet rules for inbound and outbound
+    - is a firewall at the subnet level
   - **Security Group**
     — Stateful, operate at the EC2 instance level or ENI
     - controls the traffic that is allowed to reach and leave the resources that it is associated with (eg inbound and outbound traffic to EC2 instance).
+    - is a firewall at the instance level
   - VPC Peering — Connect two VPC with non-overlapping IP ranges, nontransitive
   - Elastic IP — Fixed public IPv4, ongoing cost if not in-use
   - VPC Endpoints — Provide Private access to AWS Services within VPC
@@ -401,74 +411,73 @@ There are four AWS support plans available:
 - Business — 24×7 email, chat, and phone support.
 - Enterprise — 24×7 email, chat, and phone support.
 
-### AWS Well-Architected and the Six Pillars
-The AWS Well-Architected Framework describes key concepts, design principles, and architectural best practices for designing and running workloads in the cloud.
-By answering a few foundational questions, learn how well your architecture aligns with cloud best practices and gain guidance for making improvements.
 
-- Operational Excellence Pillar — Includes the ability to run and monitor systems to deliver business value and to continually improve supporting processes and procedures
-- Performance Efficiency Pillar — The performance efficiency pillar focuses on the structured and streamlined allocation of IT and computing resources. Key topics include selecting resource types and sizes optimized for workload requirements, monitoring performance, and maintaining efficiency as business needs evolve.
-- Reliability Pillar — The reliability pillar focuses on workloads performing their intended functions and how to recover quickly from failure to meet demands. Key topics include distributed system design, recovery planning, and adapting to changing requirements.
-- Security Pillar — The security pillar focuses on protecting information and systems. Key topics include confidentiality and integrity of data, managing user permissions, and establishing controls to detect security events.
-- Cost Optimisation Pillar — The cost optimisation pillar focuses on avoiding unnecessary costs. Key topics include understanding spending over time and controlling fund allocation, selecting resources of the right type and quantity, and scaling to meet business needs without overspending.
-- Sustainability Pillar — The sustainability pillar focuses on minimizing the environmental impacts of running cloud workloads. Key topics include a shared responsibility model for sustainability, understanding impact, and maximizing utilization to minimize required resources and reduce downstream impacts.
-
+### Management 
+- **AWS Managed Services**
+  - manages the daily operations of your AWS  infrastructure in alignement with
+  - Alignement with ITIL: Information Technology Infrastructure Library
+  - Baseline integration with ITSM: Information Technology System Management
+  - Supoorts 20+ services for Enterprises
+      
 ### AWS Cloud Adoption Framework (AWS CAF)
 
-Other Services
- Amazon WorkSpace
-Managed Desktop as a Service (DaaS) solution to easily provision Windows or Linux desktops
-Great to eliminate management of on-premiseVDI (Virtual Desktop Infrastructure)
-Fast and quickly scalable to thousands of users
-Secured data – integrates with KMS
-Pay-as-you-go service with monthly or hourly rates
- Amazon AppSteam 2.0
-Desktop Application Streaming Service
-Deliver to any computer, without acquiring, provisioning infrastructure
-The application is delivered from within a web browser  AWS IoT Core
-AWS IoT Core allows you to easily connect IoT devices to the AWS Cloud
-Serverless, secure & scalable to billions of devices and trillions of messages ○ Your applications can communicate with your devices even when they aren’t connected
- Amazon Elastic Transcoder ○ ElasticTranscoder is used to convert media files stored in S3 into media files in the formats required by consumer playback devices (phones etc..)  AWS AppSync
-○ Store and sync data across mobile and web apps in real-time
-Makes use of GraphQL (mobile technology from Facebook)
- AWS Amplify — A set of tools and services that helps you develop and deploy scalable full-stack web and mobile applications
- AWS Device Farm — Fully-managed service that tests your web and mobile apps against desktop browsers, real mobile devices, and tablets
- AWS Backup — Fully-managed service to centrally manage and automate backups across AWS services
- Disaster Strategy
-Backup and Restore
-Pilot Light
-Warm Standby
-Multi-site/Hot-site
-Amazon Elastic Disaster Recovery (DRS) — Quickly and easily recover your physical, virtual, and cloud-based servers into AWS
- AWS DataSync
-Move large amounts of data from on-premises to AWS
-Replication tasks can be scheduled hourly, daily, weekly
-The replication tasks are incremental after the first full load
-
-### AWS Application Discovery Service
-- Plan migration projects by gathering information about on-premises data centers
-- Server utilization data and dependency mapping are important for migrations 
-- Agentless Discovery (AWS Agentless Discovery Connector) → VM inventory, configuration, and performance history such as CPU, memory, and disk usage 
-- Agent-based Discovery (AWS Application Discovery Agent) → System configuration, system performance, running processes, and details of the network connections between systems
-- Resulting data can be viewed within AWS Migration Hub
+### Other Services ###
+- Amazon WorkSpace
+  - Managed Desktop as a Service (DaaS) solution to easily provision Windows or Linux desktops
+  - Great to eliminate management of on-premiseVDI (Virtual Desktop Infrastructure)
+  - Fast and quickly scalable to thousands of users
+  - Secured data – integrates with KMS
+  - Pay-as-you-go service with monthly or hourly rates
+- Amazon AppSteam 2.0
+  - Desktop Application Streaming Service
+  - Deliver to any computer, without acquiring, provisioning infrastructure
+  - The application is delivered from within a web browser  AWS IoT Core
+- AWS IoT Core
+  - allows you to easily connect IoT devices to the AWS Cloud
+  - Serverless, secure & scalable to billions of devices and trillions of messages
+  - Your applications can communicate with your devices even when they aren’t connected
+- Amazon Elastic Transcoder
+  - ElasticTranscoder is used to convert media files stored in S3 into media files in the formats required by consumer playback devices (phones etc..)
+- AWS AppSync
+  - Store and sync data across mobile and web apps in real-time
+  - Makes use of GraphQL (mobile technology from Facebook)
+- AWS Amplify — A set of tools and services that helps you develop and deploy scalable full-stack web and mobile applications
+- AWS Device Farm — Fully-managed service that tests your web and mobile apps against desktop browsers, real mobile devices, and tablets
+- AWS Backup — Fully-managed service to centrally manage and automate backups across AWS services
+- Disaster Strategy
+  - Backup and Restore
+  - Pilot Light
+  - Warm Standby
+  - Multi-site/Hot-site
+- Amazon Elastic Disaster Recovery (DRS) — Quickly and easily recover your physical, virtual, and cloud-based servers into AWS
+- AWS DataSync
+  - Move large amounts of data from on-premises to AWS
+  - Replication tasks can be scheduled hourly, daily, weekly
+  - The replication tasks are incremental after the first full load
+- AWS Application Discovery Service
+  - Plan migration projects by gathering information about on-premises data centers
+  - Server utilization data and dependency mapping are important for migrations 
+  - Agentless Discovery (AWS Agentless Discovery Connector) → VM inventory, configuration, and performance history such as CPU, memory, and disk usage 
+  - Agent-based Discovery (AWS Application Discovery Agent) → System configuration, system performance, running processes, and details of the network connections between systems
+  - Resulting data can be viewed within AWS Migration Hub
 - AWS Application Migration Service (MNG)
 - AWS Migration Evaluator
 - AWS Migration Hub
-- Central location to collect servers and applications inventory data for the assessment, planning, and tracking of migrations to AWS
-- Helps accelerate your migration to AWS, automate lift-and-shift
-- AWS Migration Hub Orchestrator — provides pre-built templates to save time and effort migrating enterprise apps (e.g., SAP, Microsoft SQL Server…)
-- Supports migrations status updates from Application Migration Service
-
-### (MGN) and Database Migration Service (DMS)  AWS Fault Injection Simulator (FIS)
-- A fully managed service for running fault injection experiments on AWS workloads
-- Based on Chaos Engineering — stressing an application by creating disruptive events (e.g., a sudden increase in CPU or memory), observing how the system responds, and implementing improvements
-AWS Step Functions
-Build a serverless visual workflow to orchestrate your Lambda functions
-Use cases: order fulfillment, data processing, web applications, any workflow
- AWS Ground Station
-Fully managed service that lets you control satellite communications, process data, and scale your satellite operations
-Use cases: weather forecasting, surface imaging, communications, video broadcasts
- Amazon Pinpoint
-Scalable 2-ways (inbound/outbound) marketing communication service
-Supports email, SMS, push, voice, and in-app messaging
-Use cases: run campaigns by sending marketing, bulk, and transactional SMS messages
+  - Central location to collect servers and applications inventory data for the assessment, planning, and tracking of migrations to AWS
+  - Helps accelerate your migration to AWS, automate lift-and-shift
+  - AWS Migration Hub Orchestrator — provides pre-built templates to save time and effort migrating enterprise apps (e.g., SAP, Microsoft SQL Server…)
+  - Supports migrations status updates from Application Migration Service (MGN) and Database Migration Service (DMS)
+- AWS Fault Injection Simulator (FIS)
+  - A fully managed service for running fault injection experiments on AWS workloads
+  - Based on Chaos Engineering — stressing an application by creating disruptive events (e.g., a sudden increase in CPU or memory), observing how the system responds, and implementing improvements
+- AWS Step Functions
+  - Build a serverless visual workflow to orchestrate your Lambda functions
+  - Use cases: order fulfillment, data processing, web applications, any workflow
+- AWS Ground Station
+  - Fully managed service that lets you control satellite communications, process data, and scale your satellite operations
+  - Use cases: weather forecasting, surface imaging, communications, video broadcasts
+- Amazon Pinpoint
+  - Scalable 2-ways (inbound/outbound) marketing communication service
+  - Supports email, SMS, push, voice, and in-app messaging
+  - Use cases: run campaigns by sending marketing, bulk, and transactional SMS messages
 
