@@ -11,6 +11,11 @@
   - Increase speed and agility
   - Stop spending money running and maintaining data centers
   - Go global in minutes 
+- Elasticity: The ability to acquire resources as you need them and release resources when you no longer need them
+- Agility: quickly developing, deploying, and launching software applications in the cloud
+- Vertical Scalability: more computing and processing power is added to a machine to increase its performance
+- Horizontal Scalability: one that can increase capacity by adding more computers to the system.
+- High Availability: data protection for all the legacy file data that businesses want to move to AWS, as well as reliable performance with minimal downtime and costs. 
 
 ### 6 Categories and colors
 |Category | Color |
@@ -34,14 +39,10 @@
 | **Region**            | - Global location<br>- separate geographic area <br>- Has multiple, isolated AZs                   |
 | **Availability Zone** | - Isolated data centers<br>- Within a region <br>- Multiple AZs protect against failure§          |
 | **Edge Location**     | - CDN sites<br>- Cache content to reduce latency<br>- Not used to deploy infrastructures (EC2 instances, EBS storage)|
-| **Local Zone**        | - Close to users<br>- Low-latency access              |
+| **Local Zone**        | - Extension of a Region close to users<br>- Low-latency access              |
 | **Data Center**       | - House computer systems<br>- Associated components   |
 | **Wavelength Zone**   | - Edge of 5G networks<br>- Ultra-low latency          |
 
-- **Availability Zone**. 
-- **Local Zone**: an extension of a Region that is geographically close to your users
-- Edge Locations
-- Clusters of data centers
 - Compliance, Proximity, Latency
 - Available services
 - AWS Regional Services List
@@ -149,7 +150,6 @@
 - FSx for Lustre — High-Performance Computing Linux file system
 
 ### ELB & ASG
-- High Availability vs Scalability (vertical and horizontal) vs Elasticity vs Agility in the Cloud
 - Low Latency != high availability
 - **ELB** Elastic Load Balancers:
   - Load Balancing: Connections distributed across multiple instances
@@ -331,7 +331,9 @@ DDoS = Distributed Denial of Service
 - **ACM** AWS Certificate Manager: Provision and manage SSL/TLS certificates with AWS services and connected resources. In flight encryption
 - **AWS Secrets Manager**: Rotation, Automation, Centrally manages the lifecycle of secrets
 - **AWS Artifact** — Access AWS and ISV security and compliance reports.
-- **GuardDuty** — Find malicious behavior with VPC, DNS & CloudTrail Logs
+- **GuardDuty**
+  — Intelligent threat detection
+  — Find malicious behavior with VPC, DNS & CloudTrail Logs
   - Logs (VPC, CloudTrail, DNS, Lambda, RDB, ...) -> GD -> EventBridge -> [SNS, Lambda, ...] 
 - **Inspector**
   — Find software vulnerabilities in EC2, ECR images, and Lambda functions,
