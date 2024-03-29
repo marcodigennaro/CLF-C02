@@ -89,7 +89,7 @@
   - On-demand
   - Reserved (Standard + Convertible)
   - Serving Plans
-  - Spot Instances
+  - Spot Instances - up to 90% discount
   - Dedicated Host
   - Dedicated Instance
   - Capacity Reservation
@@ -276,8 +276,9 @@ Decouple synchronous applications
   - Understand dependencies
   - review
   - identify impacted users
-- AWS Health Dashboard — Status of all AWS services across all regions
-- AWS Account Health Dashboard — AWS events that impact your infrastructure
+- **AWS Health**
+  - **Dashboard** — Status of all AWS services across all regions
+  - **Account Dashboard** — AWS events that impact User's infrastructure
 - **Amazon CodeGuru Security**
   - Detect, track, and fix code security vulnerabilities anywhere in the development cycle using ML and automated reasoning
 - **Trusted Advisor** to get insights, Support Plan adapted to your needs
@@ -287,6 +288,7 @@ Decouple synchronous applications
     - Fault tolerance
     - Performance
     - Service limits
+  - Checks security groups for rules that allow unrestricted access (0.0.0.0/0) to specific ports
 
 ### Security & Compliance
 Shared Responsibility on AWS
@@ -346,7 +348,9 @@ DDoS = Distributed Denial of Service
   - Internet Gateway — At the VPC level, provide Internet Access
   - NAT Gateway / Instances — Give internet access to private subnets
   - NACL — Stateless, subnet rules for inbound and outbound
-  - Security Groups — Stateful, operate at the EC2 instance level or ENI
+  - **Security Group**
+    — Stateful, operate at the EC2 instance level or ENI
+    - controls the traffic that is allowed to reach and leave the resources that it is associated with (eg inbound and outbound traffic to EC2 instance).
   - VPC Peering — Connect two VPC with non-overlapping IP ranges, nontransitive
   - Elastic IP — Fixed public IPv4, ongoing cost if not in-use
   - VPC Endpoints — Provide Private access to AWS Services within VPC
