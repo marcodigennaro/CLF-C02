@@ -61,7 +61,7 @@
 | Group	       | N/A	      | A collection of users under a set of permissions | - Cannot be nested (no groups within groups)<br> - Simplifies permission management<br> - Does not have  credentials |
 | Role	       | - AWS services <br>- Users<br>- Applications	| - A set of permissions <br>- Similar to a User, but not uniquely associated to a person <br>- a IAM identity with specific permissions <br> - For EC2 instants or AWS services | - Assumed temporarily<br>- Used for granting permissions to accounts/services<br>- No long-term credentials |
 | Policy	| - Users <br>- Groups <br>- Roles	| Documents that define permissions |	- JSON document detailing permissions<br>- Can be managed (AWS predefined) or inline (user-defined)<br>- Specifies what actions are allowed or denied |
-|Organizations | A service for managing multiple AWS accounts  | - Centralized management<br>- Apply policies across accounts<br>- Simplifies billing and access control |
+|Organizations | N/A	| A service for managing multiple AWS accounts  | - Centralized management<br>- Apply policies across accounts<br>- Simplifies billing and access control |
 
 - Authorization vs Authentication
 - Security MFA + Password Policy
