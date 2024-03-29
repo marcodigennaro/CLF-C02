@@ -4,16 +4,23 @@
 ### Intro
 - 3 Deployment Methods: Private, Public, Hybrid
 - 3 types of CC: Infrastructure as a Service (IaaS), Platforms as a Service (PaaS), and Software as a Service (SaaS)
-- 5 Characteristics of CC 
-- 4 Benefits of CC: Agility, Elasticity, Cost Savings, Deploy globally in minutes 
+- 6 advantages of CC:
+  - Trade fixed expense for variable expense
+  - Benefit from massive economies of scale
+  - Stop guessing capacity
+  - Increase speed and agility
+  - Stop spending money running and maintaining data centers
+  - Go global in minutes 
 
 ### 6 Categories and colors
-- Orange: Compute
-- Purple: Network
-- Pink: Governance and Monitoring
-- Blue: Database
-- Red: Security
-- Green: Storage
+|Category | Color |
+|---------| ------|
+|Compute  | Orange|
+|Network  | Purple|
+|Governance and Monitoring  |Pink|
+|Database  |Blue|
+|Security  |Red|
+|Storate   |Green|
 
 ### Pricing 
 - Compute: by CPU time
@@ -23,13 +30,13 @@
 ### Resources
 | Resource          | Description                                           |
 |-------------------|-------------------------------------------------------|
-| Region            | - Global location<br>- Multiple AZs                   |
-| Availability Zone | - Isolated data centers<br>- Within a region          |
+| Region            | - Global location<br>- separate geographic area <br>- Has multiple, isolated AZs                   |
+| Availability Zone | - Isolated data centers<br>- Within a region <br>- Multiple AZs protect against failure§          |
 | Edge Location     | - CDN sites<br>- Cache content                        |
 | Local Zone        | - Close to users<br>- Low-latency access              |
 | Data Center       | - House computer systems<br>- Associated components   |
 | Wavelength Zone   | - Edge of 5G networks<br>- Ultra-low latency          |
-- **Region**: separate geographic area. Has multiple, isolated locations (AZ).
+
 - **Availability Zone**. 
 - **Local Zone**: an extension of a Region that is geographically close to your users
 - Edge Locations
@@ -50,35 +57,43 @@
 
 | IAM Identity | Can belong to | Description                      | Key Characteristics                                          |
 |--------------|------------|----------------------------------                |--------------------------------------------------------------|
-| User         | Groups     | An individual person or service                  | 1. Permanent long-term credentials <br>2. Can be a member of multiple groups <br>3. Directly assigned policies |
-| Group	       | N/A	      | A collection of users under a set of permissions | 1. Cannot be nested (no groups within groups)<br>2. Simplifies permission management<br>3. Does not have credentials |
-| Role	       | 1. AWS services <br>2. Users<br>3. Applications	| A set of permissions |	1. Assumed temporarily<br>2. Used for granting permissions to accounts/services<br>3.No long-term credentials |
-| Policy	| 1. Users <br>2. Groups <br>3. Roles	| Documents that define permissions |	1. JSON document detailing permissions<br>2. Can be managed (AWS predefined) or inline (user-defined)<br>3. Specifies what actions are allowed or denied |
+| User         | Groups     | An individual person or service                  | - Permanent long-term credentials <br>
+- Can be a member of multiple groups <br>
+- Directly assigned policies |
+| Group	       | N/A	      | A collection of users under a set of permissions | - Cannot be nested (no groups within groups)<br>
+- Simplifies permission management<br>
+- Does not have credentials |
+| Role	       | - AWS services <br>
+- Users<br>
+- Applications	| A set of permissions <br>
+- Similar to a User, but not uniquely associated to a person|
+- Assumed temporarily<br>
+- Used for granting permissions to accounts/services<br>
+- No long-term credentials |
+| Policy	| - Users <br>- Groups <br>- Roles	| Documents that define permissions |	- JSON document detailing permissions<br>
+- Can be managed (AWS predefined) or inline (user-defined)<br>
+- Specifies what actions are allowed or denied |
+|Organizations | A service for managing multiple AWS accounts  | - Centralized management<br>
+- Apply policies across accounts<br>
+- Simplifies billing and access control |
 
-- Authorization vs Authentication
-- Users mapped to a physical user, has a password for AWS Console
-- Groups Contains Users only
-- **User** 
-- **Policy**: JSON document that outlines permissions for users or groups
-  - Best practices:   
+
 - **Role**
   - a Role is a IAM identity with specific permissions
-  - Similar to a User, but not uniquely associated to a person
-  - Does not havee standard long-term credentials
   - For EC2 instants or AWS services
-  - Best practices: 
+
+- Authorization vs Authentication
 - Security MFA + Password Policy
+- Programmatic Access: ID Key + Secret Access Key
+- Encryption: Public/Private Keys
 - **AWS CLI** Manage your AWS services using the Command Line Interface
 - **AWS SDK** Manage your AWS services using a programming language Software Development Kit
 - Access Keys Access AWS using the CLI or SDK
 - Audit IAM Credential Reports & IAM Access Advisor
-- **IAM** Identity and Access Management
-- For users that you trust and belong to your company
-Organizations — Manage multiple accounts
-  - Security Token Service (STS) — temporary, limited-privileges credentials to access AWS resources
-  - Cognito — Create a database of users for your mobile & web applications
-  - Directory Services — Integrate Microsoft Active Directory in AWS
-  - IAM Identify Center — One login for multiple AWS accounts & applications
+- **STS** Security Token Service — temporary, limited-privileges credentials to access AWS resources
+- **Cognito** — Create a database of users for your mobile & web applications
+- **Directory Services** — Integrate Microsoft Active Directory in AWS
+- **IAM Identify Center** — One login for multiple AWS accounts & applications
 
 
 ### EC2 (Elastic Compute Cloud)
@@ -182,7 +197,7 @@ Organizations — Manage multiple accounts
   - Fargate: no instance creation
   - ECRegisty
 - **Time Stream**
-- **Quick Sight**
+- **Quick Sight** - Scalable, Serverless, Embeddable ML powered BI service.
 
 ### Serverless Compute: FaaS
 - **Lamba** — Serverless, FaaS, seamless scaling, reactive 
