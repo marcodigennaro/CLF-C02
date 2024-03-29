@@ -103,16 +103,26 @@
 - **S3** Simple Storage Service
   - Objects have key, data, metadata.
   - Can host static website or media hosting
-- **EFS** Elastic File System. No root storage, mounted to store data
+- **EFS** Elastic File System
+  - file-level storage - shared elastic file system with virtually unlimited scalability support
+  - No root storage, mounted to store data
   - **EFS IA** Infrequent Access
-- **EBS** Elastic Block Store = Block based storage for EC2
+- **EBS** Elastic Block Store
+  - Block based storage for separate EC2
+  - no two instances can have the same EBS volume attached to them
+  - high-performance option, for various databases
+  - not accessible via the internet
 - **AMI** Amazon Machine Image
 - **EC2** Instance Store -> short term storage
 - Access: standard, infrequent, archivial ( = glacier )
+- **Object Lock**: Write Once Read Many
+- Database vs Storage: Database needs engine
 
-| Object | Block | File |
-|--------|-------|------|
-| S3     | EBS   | EFS, FxS |
+|Type | Storage | 
+|--------|-------|
+|Object | S3 |
+|Block | EBS |
+|File | EFS |
 
 ### Amazon S3
 - Can not be attached to EC2 instance
@@ -281,7 +291,7 @@ Decouple synchronous applications
   - Alarms — Automate notification, perform EC2 action, notify to SNS based on metrics
   - Logs — Collect log files from EC2 instances, servers, Lambda functions...
   - Events (or **EventBridge**) — React to events in AWS, or trigger a rule on a schedule
-- **CloudTrail** — Track user activity and API usage on AWS and in hybrid and multicloud environments
+- **CloudTrail** — Track user activity and API usage and in hybrid and multicloud environments
 - **CloudTrail Insights** — Automated analysis of your CloudTrail Events
 - **AWS X-Ray**
   - Analyze and debug production and distributed applications
@@ -301,6 +311,7 @@ Decouple synchronous applications
     - Fault tolerance
     - Performance
     - Service limits
+  - reccomendation for improvement
   - Checks security groups for rules that allow unrestricted access (0.0.0.0/0) to specific ports
 
 ### Security & Compliance
@@ -416,11 +427,14 @@ There are four AWS support plans available:
 
 ### Management 
 - **AWS Managed Services**
-  - manages the daily operations of your AWS  infrastructure in alignement with
+  - manages the daily operations of your AWS infrastructure
   - Alignement with ITIL: Information Technology Infrastructure Library
   - Baseline integration with ITSM: Information Technology System Management
   - Supoorts 20+ services for Enterprises
-      
+- **AWS Systems Manager**
+  - Manage your resources on AWS and in multicloud and hybrid environments
+- **AWS Management Consolle**
+
 ### AWS Cloud Adoption Framework (AWS CAF)
 
 ### Other Services ###
