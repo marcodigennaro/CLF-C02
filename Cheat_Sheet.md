@@ -93,6 +93,9 @@
   - Dedicated Host
   - Dedicated Instance
   - Capacity Reservation
+- **AutoScaling** application availability:
+  - dynamic scaling
+  - predictive scaling  
 
 ### Storage
 - **S3** Simple Storage Service. Objects have key, data, metadata.
@@ -142,7 +145,9 @@
 
 ### ELB & ASG
 - High Availability vs Scalability (vertical and horizontal) vs Elasticity vs Agility in the Cloud
-- Elastic Load Balancers (ELB):
+- Low Latency != high availability
+- **ELB** Elastic Load Balancers:
+  - Load Balancing: Connections distributed across multiple instances
   - Distribute traffic across backend EC2 instances, can be Multi-AZ
   - Supports health checks
   - 4 types: Classic (old), Application (HTTP-L7), Network (TCP-L4), Gateway (L3)
