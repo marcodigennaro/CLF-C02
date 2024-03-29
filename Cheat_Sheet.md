@@ -221,7 +221,15 @@
 - **CodeStar** — Unified view for allowing developers to do CI/CD and code
 - **Cloud9** — Cloud IDE with collab
 - Systems Manager (Hybrid) — Patch, configure, and run commands at scale
-- OpsWorks (Hybrid) — Managed Chef and Puppet in AWS
+- **OpsWorks** (Hybrid) — Automate Operations with Chef and Puppet
+
+| Feature/Service     | Primary Focus                         | Use Case                                          | Key Features                                                   | Ideal For                                     | Integration                                        |
+|---------------------|---------------------------------------|---------------------------------------------------|----------------------------------------------------------------|-----------------------------------------------|----------------------------------------------------|
+| **AWS Config**      | Configuration management & compliance | Track configuration changes; audit compliance     | Configuration history; Compliance auditing                     | Compliance auditing; Tracking changes          | AWS services for monitoring                        |
+| **AWS OpsWorks**    | Config management with Chef/Puppet    | Manage servers with Chef/Puppet                   | Application model management; Chef/Puppet integration          | Complex apps with specific config needs        | EC2 instances; Chef/Puppet                         |
+| **AWS CloudFormation** | Infrastructure as Code               | Automate resource provisioning                    | Template-driven provisioning; Rollbacks                        | Automating AWS resource setup                   | Broad AWS integration                              |
+| **AWS Systems Manager** | Operational management              | Manage/automate operational tasks                  | Instance/application management; Automation                    | Operational tasks automation                   | EC2; AWS services for operations                   |
+
 
 ### Leveraging the AWS Global Application
 Latency, Disaster Recovery, Attack
