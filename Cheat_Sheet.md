@@ -332,13 +332,12 @@ Decouple synchronous applications
 Shared Responsibility on AWS
 DDoS = Distributed Denial of Service
 7 layers **OSI** model (Open System Intercom):
-  1. physical
-  2. data
-  3. network
-  4. transport
-  5. session
-  6. presentation
-  7. application
+  | 1. physical  | 2. data |  3. network |
+  | -------------|---------| ----------- |
+  | 4. transport | 5. session | 6. presentation |
+  | -------------|---------| ----------- |
+  | 7. application | |
+  | -------------|---------| ----------- |
 - Root user privileges
   - Change account setting
   - Close your AWS account
@@ -369,68 +368,68 @@ DDoS = Distributed Denial of Service
 
 
 ### AWS Machine Learning
-  - Rekognition — Face detection, labeling, celebrity recognition
-  - Transcribe — Audio to Text (e.g. subtitles)
-  - Polly — Text to Audio
-  - Translate — Translations
-  - Lex — Build conversation bots (e.g. chatbots), (like Alexa)
-  - Connect — Cloud contact center
-  - Comprehend — Natural Language Processing
-  - SageMaker — Machine Learning for every developer and data scientist
-  - Forecast — Build highly accurate forecasts
-  - Kendra — ML-powered search engine
-  - Personalize — Real-time personalized recommendations
-  - Textact — Detect text and data in documents
+- Rekognition — Face detection, labeling, celebrity recognition
+- Transcribe — Audio to Text (e.g. subtitles)
+- Polly — Text to Audio
+- Translate — Translations
+- Lex — Build conversation bots (e.g. chatbots), (like Alexa)
+- Connect — Cloud contact center
+- Comprehend — Natural Language Processing
+- SageMaker — Machine Learning for every developer and data scientist
+- Forecast — Build highly accurate forecasts
+- Kendra — ML-powered search engine
+- Personalize — Real-time personalized recommendations
+- Textact — Detect text and data in documents
 
 
 ### AWS VPC & Network
-  - VPC — Virtual Private Cloud
-  - Subnets — Tied to an AZ, network partition of the VPC
-  - Internet Gateway — At the VPC level, provide Internet Access
-  - NAT Gateway / Instances — Give internet access to private subnets
-  - **Network ACL**
-    — Stateless, subnet rules for inbound and outbound
-    - is a firewall at the subnet level
-  - **Security Group**
-    — Stateful, operate at the EC2 instance level or ENI
-    - controls the traffic that is allowed to reach and leave the resources that it is associated with (eg inbound and outbound traffic to EC2 instance).
-    - is a firewall at the instance level
-  - VPC Peering — Connect two VPC with non-overlapping IP ranges, nontransitive
-  - Elastic IP — Fixed public IPv4, ongoing cost if not in-use
-  - VPC Endpoints — Provide Private access to AWS Services within VPC
-  - PrivateLink — Privately connect to a service in a 3rd party VPC
-  - VPC Flow Logs — network traffic logs
-  - Site to Site VPN — VPN over public internet between op-premises DC and AWS
-  - Client VPN — OpenVPN connection from your computer into your VPC
-  - Direct Connect — Direct private connection to AWS
-  - Transit Gateway — Connect thousands of VPC and on-premises networks together
+- VPC — Virtual Private Cloud
+- Subnets — Tied to an AZ, network partition of the VPC
+- Internet Gateway — At the VPC level, provide Internet Access
+- NAT Gateway / Instances — Give internet access to private subnets
+- **Network ACL**
+  — Stateless, subnet rules for inbound and outbound
+  - is a firewall at the subnet level
+- **Security Group**
+  — Stateful, operate at the EC2 instance level or ENI
+  - controls the traffic that is allowed to reach and leave the resources that it is associated with (eg inbound and outbound traffic to EC2 instance).
+  - is a firewall at the instance level
+- VPC Peering — Connect two VPC with non-overlapping IP ranges, nontransitive
+- Elastic IP — Fixed public IPv4, ongoing cost if not in-use
+- VPC Endpoints — Provide Private access to AWS Services within VPC
+- PrivateLink — Privately connect to a service in a 3rd party VPC
+- VPC Flow Logs — network traffic logs
+- Site to Site VPN — VPN over public internet between op-premises DC and AWS
+- Client VPN — OpenVPN connection from your computer into your VPC
+- Direct Connect — Direct private connection to AWS
+- Transit Gateway — Connect thousands of VPC and on-premises networks together
 
 
 ### Account Best Practices
-  - Operate multiple accounts using Organizations
-  - Use SCP (service control policies) to restrict account power
-  - Easily setup multiple accounts with best-practices with AWS Control Tower
-  - Use Tags & Cost Allocation Tags for easy management & billing
-  - IAM guidelines — MFA, least-privilege, password policy, password rotation
-  - Cofig To record all resources configurations & compliance over time
-  - CloudFormation to deploy stack across accounts and regions
-  - Trusted Advisor to get insights, Support Plan adapted to your needs
-  - If your Account is compromised — change the root password, delete and rotate all passwords/keys, contact the AWS support
-  - Allow users to create pre-defined stacks defined by admins using AWS Service Catalog
+- Operate multiple accounts using Organizations
+- Use SCP (service control policies) to restrict account power
+- Easily setup multiple accounts with best-practices with AWS Control Tower
+- Use Tags & Cost Allocation Tags for easy management & billing
+- IAM guidelines — MFA, least-privilege, password policy, password rotation
+- Cofig To record all resources configurations & compliance over time
+- CloudFormation to deploy stack across accounts and regions
+- Trusted Advisor to get insights, Support Plan adapted to your needs
+- If your Account is compromised — change the root password, delete and rotate all passwords/keys, contact the AWS support
+- Allow users to create pre-defined stacks defined by admins using AWS Service Catalog
 
 
 ### Billing and Costing Tools
-  - Compute Optimizer — Recommends resources’ configuration to reduce cost
-  - Pricing Calculator — Cost of services on AWS
-  - Billing Dashboard — High-level overview + free tier dashboard
-  - Cost Allocation Tags — Tag resources to create detailed reports
-  - Cost and Usage Reports — The most comprehensive billing dataset
-  - Cost Explorer — View current usage (detailed) and forecast usage
-  - Billing Alarms — in us-east-1 — track overall and per-service billing
-  - Budges — More advanced — track usage, costs, RI, and get alerts
-  - Saving Plans — Easy way to save based on long-term usage of AWS
-  - Cost Anomaly Detection — Detect unusual spends using Machine Learning
-  - Service Quotas — Notify you when you’re close to the service quota threshold
+- Compute Optimizer — Recommends resources’ configuration to reduce cost
+- Pricing Calculator — Cost of services on AWS
+- Billing Dashboard — High-level overview + free tier dashboard
+- Cost Allocation Tags — Tag resources to create detailed reports
+- Cost and Usage Reports — The most comprehensive billing dataset
+- Cost Explorer — View current usage (detailed) and forecast usage
+- Billing Alarms — in us-east-1 — track overall and per-service billing
+- Budges — More advanced — track usage, costs, RI, and get alerts
+- Saving Plans — Easy way to save based on long-term usage of AWS
+- Cost Anomaly Detection — Detect unusual spends using Machine Learning
+- Service Quotas — Notify you when you’re close to the service quota threshold
 
 
 ### AWS Support Plan
