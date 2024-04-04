@@ -1,0 +1,60 @@
+- AWS CAF: Cloud Adoption Framework
+- Amazon WorkSpace
+  - Managed Desktop as a Service (DaaS) solution to easily provision Windows or Linux desktops
+  - Great to eliminate management of on-premiseVDI (Virtual Desktop Infrastructure)
+  - Fast and quickly scalable to thousands of users
+  - Secured data – integrates with KMS
+  - Pay-as-you-go service with monthly or hourly rates
+- Amazon AppSteam 2.0
+  - Desktop Application Streaming Service
+  - Deliver to any computer, without acquiring, provisioning infrastructure
+  - The application is delivered from within a web browser  AWS IoT Core
+- AWS IoT Core
+  - allows you to easily connect IoT devices to the AWS Cloud
+  - Serverless, secure & scalable to billions of devices and trillions of messages
+  - Your applications can communicate with your devices even when they aren’t connected
+- Amazon Elastic Transcoder
+  - ElasticTranscoder is used to convert media files stored in S3 into media files in the formats required by consumer playback devices (phones etc..)
+- AWS AppSync
+  - Store and sync data across mobile and web apps in real-time
+  - Makes use of GraphQL (mobile technology from Facebook)
+- AWS Amplify — A set of tools and services that helps you develop and deploy scalable full-stack web and mobile applications
+- AWS Device Farm — Fully-managed service that tests your web and mobile apps against desktop browsers, real mobile devices, and tablets
+- AWS Backup — Fully-managed service to centrally manage and automate backups across AWS services
+- Disaster Strategy
+  - Backup and Restore
+  - Pilot Light
+  - Warm Standby
+  - Multi-site/Hot-site
+- Amazon Elastic Disaster Recovery (DRS) — Quickly and easily recover your physical, virtual, and cloud-based servers into AWS
+- AWS DataSync
+  - Move large amounts of data from on-premises to AWS
+  - Replication tasks can be scheduled hourly, daily, weekly
+  - The replication tasks are incremental after the first full load
+- AWS Application Discovery Service
+  - Plan migration projects by gathering information about on-premises data centers
+  - Server utilization data and dependency mapping are important for migrations 
+  - Agentless Discovery (AWS Agentless Discovery Connector) → VM inventory, configuration, and performance history such as CPU, memory, and disk usage 
+  - Agent-based Discovery (AWS Application Discovery Agent) → System configuration, system performance, running processes, and details of the network connections between systems
+  - Resulting data can be viewed within AWS Migration Hub
+- AWS Application Migration Service (MNG)
+- AWS Migration Evaluator
+- AWS Migration Hub
+  - Central location to collect servers and applications inventory data for the assessment, planning, and tracking of migrations to AWS
+  - Helps accelerate your migration to AWS, automate lift-and-shift
+  - AWS Migration Hub Orchestrator — provides pre-built templates to save time and effort migrating enterprise apps (e.g., SAP, Microsoft SQL Server…)
+  - Supports migrations status updates from Application Migration Service (MGN) and Database Migration Service (DMS)
+- AWS Fault Injection Simulator (FIS)
+  - A fully managed service for running fault injection experiments on AWS workloads
+  - Based on Chaos Engineering — stressing an application by creating disruptive events (e.g., a sudden increase in CPU or memory), observing how the system responds, and implementing improvements
+- AWS Step Functions
+  - Build a serverless visual workflow to orchestrate your Lambda functions
+  - Use cases: order fulfillment, data processing, web applications, any workflow
+- AWS Ground Station
+  - Fully managed service that lets you control satellite communications, process data, and scale your satellite operations
+  - Use cases: weather forecasting, surface imaging, communications, video broadcasts
+- Amazon Pinpoint
+  - Scalable 2-ways (inbound/outbound) marketing communication service
+  - Supports email, SMS, push, voice, and in-app messaging
+  - Use cases: run campaigns by sending marketing, bulk, and transactional SMS messages
+
