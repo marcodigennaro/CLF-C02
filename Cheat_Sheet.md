@@ -329,11 +329,13 @@ Decouple synchronous applications
 
 
 ### Security & Compliance
-  |  <td colspan=3> 7 layers **OSI** model (Open System Intercom)  |
-  | -----  |  ----  |  --- |
-  | 1. physical  | 2. data |  3. network |
-  | 4. transport | 5. session | 6. presentation |
-  | 7. application | |
+  
+|  <td colspan=3> 7 layers **OSI** model (Open System Intercom)  
+| -----------  | ---------- | ---------------- 
+| 1. physical  | 2. data    | 3. network 
+| 4. transport | 5. session | 6. presentation 
+| 7. application | 
+  
 - Root user privileges
   - Change account setting
   - Close your AWS account
