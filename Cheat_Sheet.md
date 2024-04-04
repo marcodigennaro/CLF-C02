@@ -329,7 +329,7 @@ Decouple synchronous applications
 
 
 ### Security & Compliance
-  |  7 layers **OSI** model (Open System Intercom)  |
+  |  <td colspan=3> 7 layers **OSI** model (Open System Intercom)  |
   | -----  |  ----  |  --- |
   | 1. physical  | 2. data |  3. network |
   | 4. transport | 5. session | 6. presentation |
