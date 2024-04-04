@@ -329,22 +329,18 @@ Decouple synchronous applications
 
 
 ### Security & Compliance
-Shared Responsibility on AWS
-DDoS = Distributed Denial of Service
-7 layers **OSI** model (Open System Intercom):
-  |  |  |  |
+  |  7 layers **OSI** model (Open System Intercom)  |
   | -----  |  ----  |  --- |
   | 1. physical  | 2. data |  3. network |
   | 4. transport | 5. session | 6. presentation |
   | 7. application | |
-  
 - Root user privileges
   - Change account setting
   - Close your AWS account
   - Change or cancel your AWS Support plan
   - Register as a seller in the Reserved Instance Marketplace
 - **Sheild**
-  — Standard: Automatic DDoS Protection
+  — Standard: Automatic DDoS Protection (Distributed Denial of Service)
   - Advanced: 24/7 support
 - **WAF** — Web Application Firewall to filter incoming requests based on rules
   - Availability, Security, Eccessive Resources
