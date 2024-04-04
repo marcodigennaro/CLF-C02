@@ -17,6 +17,7 @@
 - Horizontal Scalability: one that can increase capacity by adding more computers to the system.
 - High Availability: data protection for all the legacy file data that businesses want to move to AWS, as well as reliable performance with minimal downtime and costs. 
 
+
 ### 6 Categories and colors
 |Category | Color |
 |---------| ------|
@@ -27,11 +28,13 @@
 |Security  |Red|
 |Storate   |Green|
 
+
 ### Pricing 
 - Compute: by CPU time
 - Storage: by MB stored
 - Network: only data leaving the cloud
 - **TCO** Total Cost of Ownership - estimates costs wrt on premises
+
 
 ### Resources
 | Resource          | Description                                           |
@@ -42,10 +45,10 @@
 | **Local Zone**        | - Extension of a Region close to users<br>- Low-latency access              |
 | **Data Center**       | - House computer systems<br>- Associated components   |
 | **Wavelength Zone**   | - Edge of 5G networks<br>- Ultra-low latency          |
-
 - Compliance, Proximity, Latency
 - Available services
 - AWS Regional Services List
+
   
 ### Well Architected Framework - 6 pillars
 - Operational Excellence
@@ -54,24 +57,24 @@
 - Performance
 - Cost Optimization
 - Sustainability
-  
-### IAM (Identity and Access Management)
 
+
+### IAM (Identity and Access Management)
 | IAM Identity | Can belong to | Description                      | Key Characteristics                                          |
 |--------------|------------|----------------------------------   |--------------------------------------------------------------|
 | **User**     | Groups     | An individual person or service  | - Permanent long-term credentials <br> - Can be a member of multiple groups <br> - Directly assigned policies |
 | **Group**	   | N/A	      | A collection of users under a set of permissions | - Cannot be nested (no groups within groups)<br> - Simplifies permission management<br> - Does not have  credentials |
 | **Role**	   | - AWS services <br>- Users<br>- Applications	| - A set of permissions <br>- Similar to a User, but not uniquely associated to a person <br>- a IAM identity with specific permissions <br> - For EC2 instants or AWS services | - Assumed temporarily<br>- Used for granting permissions to accounts/services<br>- No long-term credentials |
 | **Policy**	 | - Users <br>- Groups <br>- Roles	| Documents that define permissions |	- JSON document detailing permissions<br>- Can be managed (AWS predefined) or inline (user-defined)<br>- Specifies what actions are allowed or denied |
-| **Organizations** | N/A	| A service for managing multiple AWS accounts  | - Centralized management<br>- Apply policies across accounts<br>- Simplifies billing and access control |
+| **Organizations** | N/A	| A service for managing multiple AWS accounts  | - Centralized management<br>- Apply policies across accounts<br>- Simplifies billing and access control<br>- Offers SCP to resctrict available permissions |
 
 - Authorization vs Authentication
 - Security MFA + Password Policy
 - Programmatic Access: ID Key + Secret Access Key
 - Encryption: Public/Private Keys
-- **AWS CLI** Manage your AWS services using the Command Line Interface
-- **AWS SDK** Manage your AWS services using a programming language Software Development Kit
-- Access Keys Access AWS using the CLI or SDK
+- Manage AWS services:
+  - **AWS CLI** Command Line Interface
+  - **AWS SDK** Software Development Kit using a programming language 
 - Audit IAM Credential Reports & IAM Access Advisor
 - **STS** Security Token Service — temporary, limited-privileges credentials to access AWS resources
 - **Cognito** — Create a database of users for your mobile & web applications
@@ -87,17 +90,19 @@
 - EC2 User Data — Script launched at the first start of an instance
 - SSH — Start terminal into our EC2 Instances (port 22)
 - EC2 Instance Role — Link to IAM roles
-- Purchasing Options:
-  - On-demand
-  - Reserved (Standard + Convertible)
+- Instances Purchasing Options:
+  - On-demand: no discount
+  - Standard Reserved: up to 72% discount, 1 to 3 years contracts, required for right sized servers
+  - Convertible Reserved: more flexibility: change OS type or family
   - Serving Plans
-  - Spot Instances - up to 90% discount
+  - Spot Instances: up to 90% discount, can be terminated when needed
   - Dedicated Host
   - Dedicated Instance
   - Capacity Reservation
 - **AutoScaling** application availability:
   - dynamic scaling
   - predictive scaling  
+
 
 ### Storage
 - **S3** Simple Storage Service
@@ -124,6 +129,7 @@
 |Block | EBS |
 |File | EFS |
 
+
 ### Amazon S3
 - Can not be attached to EC2 instance
 - accessed by REST API
@@ -144,6 +150,7 @@
   — Hybrid solution to extend on-premises storage to S3
   - connects on-premises environments with cloud storage through cached volumes, stored volumes and tape-based backup.
 
+
 ### EC2 Instance Storage
 - **EBS** = Elastic Block Store
   - Network drives attached to one EC2 instance at a time
@@ -159,6 +166,7 @@
 - FSx for Windows — Network File System for Windows servers
 - FSx for Lustre — High-Performance Computing Linux file system
 
+
 ### ELB & ASG
 - Low Latency != high availability
 - **ELB** Elastic Load Balancers:
@@ -172,6 +180,7 @@
   - Implement Elasticity for your application, across multiple AZ
   - Scale EC2 instances based on the demand on your system, and replace unhealthy
   - Integrated with the ELB
+
 
 ### Databases & Analytics
 - Database vs Engine
@@ -200,6 +209,7 @@
 - **Time Stream**
 - **Quick Sight** - Scalable, Serverless, Embeddable ML powered BI service.
 
+
 ### Serverless Compute: FaaS
 - **Lamba** — Serverless, FaaS, seamless scaling, reactive 
   - **Lambda Billings**
@@ -215,6 +225,7 @@
   - **ECR** Elastic Container Registr) — Private Docker Image Repository
   - **Batch** — Run batch jobs on AWS across managed EC2 instance
   - **Lightsail** — Predictable & low pricing for simple applications & DB
+
 
 ### Deployment
 - **CloudFormation**: Content Delivery Network (CDN)
@@ -269,6 +280,7 @@ Latency, Disaster Recovery, Attack
   - Good for latency-sensitive applications
 - **WAF** Web application Firewall
 
+
 ### Cloud Integration
 Decouple synchronous applications
 - **SQS** (Simple Queue Service): produce messages in the queue
@@ -283,6 +295,7 @@ Decouple synchronous applications
   - No message retention
 - **Kinesis** — Real-time data streaming, persistence, and analysis (video)
 - **Amazon MQ** — Managed message broker for ActiveMQ and RabbitMQ in the cloud (MQTT, AMQP… protocols)
+
 
 ### Cloud Monitoring
 - **CloudWatch** - Observe and monitor resources and applications on AWS, on premises, and on other clouds
@@ -314,6 +327,7 @@ Decouple synchronous applications
   - reccomendation for improvement
   - Checks security groups for rules that allow unrestricted access (0.0.0.0/0) to specific ports
 
+
 ### Security & Compliance
 Shared Responsibility on AWS
 DDoS = Distributed Denial of Service
@@ -325,13 +339,11 @@ DDoS = Distributed Denial of Service
   5. session
   6. presentation
   7. application
-     
 - Root user privileges
   - Change account setting
   - Close your AWS account
   - Change or cancel your AWS Support plan
   - Register as a seller in the Reserved Instance Marketplace
-
 - **Sheild**
   — Standard: Automatic DDoS Protection
   - Advanced: 24/7 support
@@ -370,6 +382,7 @@ DDoS = Distributed Denial of Service
   - Personalize — Real-time personalized recommendations
   - Textact — Detect text and data in documents
 
+
 ### AWS VPC & Network
   - VPC — Virtual Private Cloud
   - Subnets — Tied to an AZ, network partition of the VPC
@@ -392,6 +405,7 @@ DDoS = Distributed Denial of Service
   - Direct Connect — Direct private connection to AWS
   - Transit Gateway — Connect thousands of VPC and on-premises networks together
 
+
 ### Account Best Practices
   - Operate multiple accounts using Organizations
   - Use SCP (service control policies) to restrict account power
@@ -403,6 +417,7 @@ DDoS = Distributed Denial of Service
   - Trusted Advisor to get insights, Support Plan adapted to your needs
   - If your Account is compromised — change the root password, delete and rotate all passwords/keys, contact the AWS support
   - Allow users to create pre-defined stacks defined by admins using AWS Service Catalog
+
 
 ### Billing and Costing Tools
   - Compute Optimizer — Recommends resources’ configuration to reduce cost
@@ -416,6 +431,7 @@ DDoS = Distributed Denial of Service
   - Saving Plans — Easy way to save based on long-term usage of AWS
   - Cost Anomaly Detection — Detect unusual spends using Machine Learning
   - Service Quotas — Notify you when you’re close to the service quota threshold
+
 
 ### AWS Support Plan
 There are four AWS support plans available:
@@ -434,66 +450,3 @@ There are four AWS support plans available:
 - **AWS Systems Manager**
   - Manage your resources on AWS and in multicloud and hybrid environments
 - **AWS Management Consolle**
-
-### AWS Cloud Adoption Framework (AWS CAF)
-
-### Other Services ###
-- Amazon WorkSpace
-  - Managed Desktop as a Service (DaaS) solution to easily provision Windows or Linux desktops
-  - Great to eliminate management of on-premiseVDI (Virtual Desktop Infrastructure)
-  - Fast and quickly scalable to thousands of users
-  - Secured data – integrates with KMS
-  - Pay-as-you-go service with monthly or hourly rates
-- Amazon AppSteam 2.0
-  - Desktop Application Streaming Service
-  - Deliver to any computer, without acquiring, provisioning infrastructure
-  - The application is delivered from within a web browser  AWS IoT Core
-- AWS IoT Core
-  - allows you to easily connect IoT devices to the AWS Cloud
-  - Serverless, secure & scalable to billions of devices and trillions of messages
-  - Your applications can communicate with your devices even when they aren’t connected
-- Amazon Elastic Transcoder
-  - ElasticTranscoder is used to convert media files stored in S3 into media files in the formats required by consumer playback devices (phones etc..)
-- AWS AppSync
-  - Store and sync data across mobile and web apps in real-time
-  - Makes use of GraphQL (mobile technology from Facebook)
-- AWS Amplify — A set of tools and services that helps you develop and deploy scalable full-stack web and mobile applications
-- AWS Device Farm — Fully-managed service that tests your web and mobile apps against desktop browsers, real mobile devices, and tablets
-- AWS Backup — Fully-managed service to centrally manage and automate backups across AWS services
-- Disaster Strategy
-  - Backup and Restore
-  - Pilot Light
-  - Warm Standby
-  - Multi-site/Hot-site
-- Amazon Elastic Disaster Recovery (DRS) — Quickly and easily recover your physical, virtual, and cloud-based servers into AWS
-- AWS DataSync
-  - Move large amounts of data from on-premises to AWS
-  - Replication tasks can be scheduled hourly, daily, weekly
-  - The replication tasks are incremental after the first full load
-- AWS Application Discovery Service
-  - Plan migration projects by gathering information about on-premises data centers
-  - Server utilization data and dependency mapping are important for migrations 
-  - Agentless Discovery (AWS Agentless Discovery Connector) → VM inventory, configuration, and performance history such as CPU, memory, and disk usage 
-  - Agent-based Discovery (AWS Application Discovery Agent) → System configuration, system performance, running processes, and details of the network connections between systems
-  - Resulting data can be viewed within AWS Migration Hub
-- AWS Application Migration Service (MNG)
-- AWS Migration Evaluator
-- AWS Migration Hub
-  - Central location to collect servers and applications inventory data for the assessment, planning, and tracking of migrations to AWS
-  - Helps accelerate your migration to AWS, automate lift-and-shift
-  - AWS Migration Hub Orchestrator — provides pre-built templates to save time and effort migrating enterprise apps (e.g., SAP, Microsoft SQL Server…)
-  - Supports migrations status updates from Application Migration Service (MGN) and Database Migration Service (DMS)
-- AWS Fault Injection Simulator (FIS)
-  - A fully managed service for running fault injection experiments on AWS workloads
-  - Based on Chaos Engineering — stressing an application by creating disruptive events (e.g., a sudden increase in CPU or memory), observing how the system responds, and implementing improvements
-- AWS Step Functions
-  - Build a serverless visual workflow to orchestrate your Lambda functions
-  - Use cases: order fulfillment, data processing, web applications, any workflow
-- AWS Ground Station
-  - Fully managed service that lets you control satellite communications, process data, and scale your satellite operations
-  - Use cases: weather forecasting, surface imaging, communications, video broadcasts
-- Amazon Pinpoint
-  - Scalable 2-ways (inbound/outbound) marketing communication service
-  - Supports email, SMS, push, voice, and in-app messaging
-  - Use cases: run campaigns by sending marketing, bulk, and transactional SMS messages
-
